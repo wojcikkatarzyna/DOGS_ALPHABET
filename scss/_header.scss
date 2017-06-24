@@ -3,53 +3,80 @@
   background-color: $baseColor3;
 }
 header{
-    border: 1px solid black;
+
 
     .name{
-        border: 1px solid black;
         @extend %head;
+        @include desktop{
+          text-align: center;
+          min-height: 200px;
+          color: $baseColor2;
+          background-color: $baseColor1;
+        };
         .title{
-            height: 100%;
             font-size: 3rem;
             font-weight: bold;
-            border: 1px solid black;
             padding-left: 15px;
             min-height: 75px;
             line-height: 75px;
+            @include desktop{
+              font-size: 5rem;
+              height: 125px;
+              line-height: 150px;
+            };
         }
         .description{
-            border: 1px solid black;
             display: none;
+            @include desktop{
+              display: block;
+              height: 75px;
+            }
         }
     }
 
     nav{
-      border: 1px solid black;
       text-align: center;
       text-align: right;
       @extend %head;
+      .mobileMenu{
+        min-height: 75px;
+        padding-right: 15px;
+        padding-top: 5px;
+        @include desktop{
+          display: none;
+        };
+      }
       a{
         text-decoration: none;
         @extend %head;
-        &:first-of-type{
-          min-height: 75px;
-          padding-right: 15px;
-          padding-top: 5px;
-        }
       }
       ul{
         display: none;
-        &.showMenu{
-          display: block;
-
-          li{
-            list-style: none;
-            text-align: center;
-            line-height: 65px;
-            border-top: 5px solid rgb(172, 166, 166);
-            min-height: 65px;
+        @include desktop{
+          display: flex;
+          justify-content: space-around;
+        }
+        li{
+          list-style: none;
+          text-align: center;
+          line-height: 65px;
+          min-height: 65px;
+          &:nth-of-type(2){
+            border-left: 5px solid rgb(172, 166, 166);
+            border-right: 5px solid rgb(172, 166, 166);
           }
+          @include desktop{
+            width: 33.333%;
+          };
         }
       }
     }
+}
+
+.showMenu{
+  display: block;
+  li{
+    border: transparent;
+    border-top: 5px solid rgb(172, 166, 166);
+  }
 }
