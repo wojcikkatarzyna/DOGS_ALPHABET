@@ -1,0 +1,55 @@
+%head{
+  color: white;
+  background-color: $baseColor3;
+}
+header{
+    border: 1px solid black;
+
+    .name{
+        border: 1px solid black;
+        @extend %head;
+        .title{
+            height: 100%;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 1px solid black;
+            padding-left: 15px;
+            min-height: 75px;
+            line-height: 75px;
+        }
+        .description{
+            border: 1px solid black;
+            display: none;
+        }
+    }
+
+    nav{
+      border: 1px solid black;
+      text-align: center;
+      text-align: right;
+      @extend %head;
+      a{
+        text-decoration: none;
+        @extend %head;
+        &:first-of-type{
+          min-height: 75px;
+          padding-right: 15px;
+          padding-top: 5px;
+        }
+      }
+      ul{
+        display: none;
+        &.showMenu{
+          display: block;
+
+          li{
+            list-style: none;
+            text-align: center;
+            line-height: 65px;
+            border-top: 5px solid rgb(172, 166, 166);
+            min-height: 65px;
+          }
+        }
+      }
+    }
+}

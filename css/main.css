@@ -255,3 +255,46 @@ input[type=button] {
       width: 87.5%; }
     .container .row .col-l-8 {
       width: 100%; } }
+
+body {
+  font-size: 30px; }
+
+header .name, header nav, header nav a {
+  color: white;
+  background-color: #636261; }
+
+header {
+  border: 1px solid black; }
+  header .name {
+    border: 1px solid black; }
+    header .name .title {
+      height: 100%;
+      font-size: 3rem;
+      font-weight: bold;
+      border: 1px solid black;
+      padding-left: 15px;
+      min-height: 75px;
+      line-height: 75px; }
+    header .name .description {
+      border: 1px solid black;
+      display: none; }
+  header nav {
+    border: 1px solid black;
+    text-align: center;
+    text-align: right; }
+    header nav a {
+      text-decoration: none; }
+      header nav a:first-of-type {
+        min-height: 75px;
+        padding-right: 15px;
+        padding-top: 5px; }
+    header nav ul {
+      display: none; }
+      header nav ul.showMenu {
+        display: block; }
+        header nav ul.showMenu li {
+          list-style: none;
+          text-align: center;
+          line-height: 65px;
+          border-top: 5px solid #aca6a6;
+          min-height: 65px; }
