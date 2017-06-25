@@ -324,3 +324,49 @@ header nav {
   .showMenu li {
     border: transparent;
     border-top: 5px solid #aca6a6; }
+
+#gallery {
+  min-height: 200px; }
+
+#alphabet {
+  min-height: 1000px; }
+  #alphabet .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    background-color: #5c8a9a; }
+    #alphabet .row .box {
+      width: 30vw;
+      height: 30vw;
+      position: relative;
+      border: 1px solid red;
+      margin: 25px 0; }
+      #alphabet .row .box div.letter {
+        width: 100%;
+        height: 100%;
+        border: 1px solid pink;
+        position: absolute;
+        z-index: 30;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: 10rem;
+        color: #fac60e;
+        text-align: center;
+        line-height: 100%;
+        border-radius: 25%; }
+      #alphabet .row .box img {
+        border: 5px solid #fac60e;
+        border-radius: 25%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20; }
+      #alphabet .row .box span.imgSource {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 25;
+        border: 1px solid green;
+        font-size: 1rem;
+        text-align: center;
+        background-color: rgba(233, 226, 62, 0.6); }
