@@ -11,13 +11,14 @@ $(document).ready(function(){
 
     //BOX'S BACKGROUND IN ALPHABET SECTION:
     let boxes = $('#alphabet .box');
-    console.log(boxes);
 
     for (let i=0; i<boxes.length; i++){
-        let letter = $(this).children().first().text();
-        $(this).attr('background-image','url("../images/B.jpg")');
+        let url = "../images/"+boxes.eq(i).children().first().text()+".jpg";
+        boxes.eq(i).css({
+        'background-image':'url('+url+')',
+        'background-size':'cover',
+        'background-repeat':'no-repeat'
+        });
     }
-
-
 
 })
