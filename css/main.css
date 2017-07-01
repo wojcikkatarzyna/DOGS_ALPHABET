@@ -366,23 +366,48 @@ header nav {
             font-size: 0.8rem;
             display: none; } }
 
-#races .racesBox {
-  display: none;
-  border: 5px solid #5c8a9a; }
-  #races .racesBox .racesImage img {
+.hideRacesBox {
+  display: none; }
+
+.racesBox {
+  border: 5px solid #636261;
+  background: white;
+  position: relative; }
+  .racesBox button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    background-color: #636261; }
+  .racesBox .racesImage {
     width: 100%; }
-  #races .racesBox .racesInfo {
-    line-height: 100%;
+    @media (min-width: 1200px) {
+      .racesBox .racesImage {
+        width: 50%; } }
+  .racesBox .racesInfo {
+    width: 100%;
     padding: 20px;
     padding-left: 20%; }
-    #races .racesBox .racesInfo h1 {
+    @media (min-width: 1200px) {
+      .racesBox .racesInfo {
+        width: 50%; } }
+    .racesBox .racesInfo h1 {
       padding-bottom: 20px;
       font-size: 4rem;
       text-decoration: underline;
-      color: #5c8a9a;
+      color: #636261;
       font-weight: bold; }
 
-.showRaceBox {
-  display: block;
-  width: 100vw;
-  height: 55vw; }
+.fullScreen {
+  margin: auto auto;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 80vh;
+  left: 10vw;
+  top: 10vh;
+  z-index: 50; }

@@ -8,8 +8,7 @@ $(document).ready(function(){
       $(this).next().toggleClass('showMenu');
     })
 
-
-    //BOX'S BACKGROUND IN ALPHABET SECTION:
+    //SET BOX'S BACKGROUND IN ALPHABET SECTION:
     const boxes = $('#alphabet .box');
 
     for (let i=0; i<boxes.length; i++){
@@ -24,9 +23,24 @@ $(document).ready(function(){
     //THUMBNAILS EVENT
     const racesBox = $('#races .racesBox');
 
-    boxes.on('click', function(e) {
-      e.preventDefault();
-      racesBox.addClass('showRaceBox');
-    })
+    for (let i=0; i<boxes.length; i++){
+        boxes.on('click', function(e) {
+          e.preventDefault();
+          $(this).next().removeClass('hideRacesBox');
+          $(this).next().addClass('fullScreen');
+        })
+      }
+
+      //CLOSE button
+      const alphabet = $('#alphabet');
+      const buttons = $('.racesBox button');
+
+      for (let i=0; i<buttons.length; i++){
+          buttons.eq(i).on('click', function(e) {
+            e.preventDefault();
+            buttons.eq(i).parent().removeClass('fullScreen');
+            buttons.eq(i).parent().addClass('hideRacesBox');
+          })
+      }
 
 })
