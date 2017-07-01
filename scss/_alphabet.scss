@@ -43,11 +43,10 @@
             span.imgSource{
               width: 100%;
               position: absolute;
-              bottom:-2vw;
+              bottom: 7px;
               z-index: 25;
               font-size: 1rem;
               text-align: center;
-              background-color: rgba(233, 226, 62, 0.6);
               @include desktop{
                 bottom: -1.5vw;
                 font-size: 0.8rem;

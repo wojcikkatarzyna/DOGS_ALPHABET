@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // MOBILE MENU:
-    let hamburger = $('.mobileMenu');
+    const hamburger = $('.mobileMenu');
 
     hamburger.on('click', function(e){
       e.preventDefault();
@@ -10,15 +10,23 @@ $(document).ready(function(){
 
 
     //BOX'S BACKGROUND IN ALPHABET SECTION:
-    let boxes = $('#alphabet .box');
+    const boxes = $('#alphabet .box');
 
     for (let i=0; i<boxes.length; i++){
-        let url = "../images/"+boxes.eq(i).children().first().text()+".jpg";
+        const url = "../images/"+boxes.eq(i).children().first().text()+".jpg";
         boxes.eq(i).css({
         'background-image':'url('+url+')',
         'background-size':'cover',
         'background-repeat':'no-repeat'
         });
     }
+
+    //THUMBNAILS EVENT
+    const racesBox = $('#races .racesBox');
+
+    boxes.on('click', function(e) {
+      e.preventDefault();
+      racesBox.addClass('showRaceBox');
+    })
 
 })

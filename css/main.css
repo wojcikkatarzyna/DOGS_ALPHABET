@@ -356,13 +356,33 @@ header nav {
       #alphabet .row .box span.imgSource {
         width: 100%;
         position: absolute;
-        bottom: -2vw;
+        bottom: 7px;
         z-index: 25;
         font-size: 1rem;
-        text-align: center;
-        background-color: rgba(233, 226, 62, 0.6); }
+        text-align: center; }
         @media (min-width: 1200px) {
           #alphabet .row .box span.imgSource {
             bottom: -1.5vw;
             font-size: 0.8rem;
             display: none; } }
+
+#races .racesBox {
+  display: none;
+  border: 5px solid #5c8a9a; }
+  #races .racesBox .racesImage img {
+    width: 100%; }
+  #races .racesBox .racesInfo {
+    line-height: 100%;
+    padding: 20px;
+    padding-left: 20%; }
+    #races .racesBox .racesInfo h1 {
+      padding-bottom: 20px;
+      font-size: 4rem;
+      text-decoration: underline;
+      color: #5c8a9a;
+      font-weight: bold; }
+
+.showRaceBox {
+  display: block;
+  width: 100vw;
+  height: 55vw; }

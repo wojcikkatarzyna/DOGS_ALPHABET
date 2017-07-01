@@ -1,0 +1,29 @@
+#races{
+    .racesBox{
+        display: none;
+        border: 5px solid $baseColor1;
+        .racesImage{
+            img{
+              width: 100%;
+            }
+        }
+        .racesInfo{
+            line-height: 100%;
+            padding: 20px;
+            padding-left: 20%;
+            h1{
+                padding-bottom: 20px;
+                font-size: 4rem;
+                text-decoration: underline;
+                color: $baseColor1;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.showRaceBox{
+    display: block;
+    width: 100vw;
+    height: 55vw;
+}
