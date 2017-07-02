@@ -14,9 +14,20 @@
             margin: 25px 0;
             border-radius: 25%;
             border: 5px solid $baseColor2;
+            @include tablet{
+              width: 18vw;
+              height: 18vw;
+            }
             @include desktop{
               width: 12vw;
-              height: 14vw;
+              height: 12vw;
+              &:hover {
+                animation-name: spaceboots;
+              	animation-duration: 0.8s;
+              	transform-origin:50% 50%;
+              	animation-iteration-count: infinite;
+              	animation-timing-function: linear;
+              }
               &:hover > div.letter{
                 display: none;
               }
@@ -30,13 +41,16 @@
               position: absolute;
               z-index: 30;
               background-color: rgba(255,255,255,0.7);
-              font-size: 15rem;
+              font-size: 25vw;
               color: $baseColor2;
               text-align: center;
-              line-height: 120%;
+              line-height: 100%;
               border-radius: 25%;
+              @include tablet{
+                font-size: 14vw;
+              }
               @include desktop{
-                font-size: 10rem;
+                font-size: 10vw;
               }
             }
 

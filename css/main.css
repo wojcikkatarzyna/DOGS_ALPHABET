@@ -230,7 +230,7 @@ input[type=button] {
       width: 83.33333%; }
     .container .row .col-m-6 {
       width: 100%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     .container .row .col-l-1 {
       width: 16.66667%; }
     .container .row .col-l-2 {
@@ -251,7 +251,7 @@ header .name, header nav, header nav a {
   color: white;
   background-color: #636261; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   header .name {
     text-align: center;
     min-height: 200px;
@@ -264,7 +264,7 @@ header .name .title {
   padding-left: 15px;
   min-height: 75px;
   line-height: 75px; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     header .name .title {
       font-size: 5rem;
       height: 125px;
@@ -272,7 +272,7 @@ header .name .title {
 
 header .name .description {
   display: none; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     header .name .description {
       display: block;
       height: 75px; } }
@@ -284,14 +284,14 @@ header nav {
     min-height: 75px;
     padding-right: 15px;
     padding-top: 5px; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1024px) {
       header nav .mobileMenu {
         display: none; } }
   header nav a {
     text-decoration: none; }
   header nav ul {
     display: none; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1024px) {
       header nav ul {
         display: flex;
         justify-content: space-around; } }
@@ -303,7 +303,7 @@ header nav {
       header nav ul li:nth-of-type(2) {
         border-left: 5px solid #aca6a6;
         border-right: 5px solid #aca6a6; }
-      @media (min-width: 1200px) {
+      @media (min-width: 1024px) {
         header nav ul li {
           width: 33.333%; } }
 
@@ -331,10 +331,20 @@ header nav {
       margin: 25px 0;
       border-radius: 25%;
       border: 5px solid #fac60e; }
-      @media (min-width: 1200px) {
+      @media (min-width: 780px) {
+        #alphabet .row .box {
+          width: 18vw;
+          height: 18vw; } }
+      @media (min-width: 1024px) {
         #alphabet .row .box {
           width: 12vw;
-          height: 14vw; }
+          height: 12vw; }
+          #alphabet .row .box:hover {
+            animation-name: spaceboots;
+            animation-duration: 0.8s;
+            transform-origin: 50% 50%;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; }
           #alphabet .row .box:hover > div.letter {
             display: none; }
           #alphabet .row .box:hover > span.imgSource {
@@ -345,14 +355,17 @@ header nav {
         position: absolute;
         z-index: 30;
         background-color: rgba(255, 255, 255, 0.7);
-        font-size: 15rem;
+        font-size: 25vw;
         color: #fac60e;
         text-align: center;
-        line-height: 120%;
+        line-height: 100%;
         border-radius: 25%; }
-        @media (min-width: 1200px) {
+        @media (min-width: 780px) {
           #alphabet .row .box div.letter {
-            font-size: 10rem; } }
+            font-size: 14vw; } }
+        @media (min-width: 1024px) {
+          #alphabet .row .box div.letter {
+            font-size: 10vw; } }
       #alphabet .row .box span.imgSource {
         width: 100%;
         position: absolute;
@@ -360,7 +373,7 @@ header nav {
         z-index: 25;
         font-size: 1rem;
         text-align: center; }
-        @media (min-width: 1200px) {
+        @media (min-width: 1024px) {
           #alphabet .row .box span.imgSource {
             bottom: -1.5vw;
             font-size: 0.8rem;
@@ -383,14 +396,14 @@ header nav {
     background-color: #636261; }
   .racesBox .racesImage {
     width: 100%; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1024px) {
       .racesBox .racesImage {
         width: 50%; } }
   .racesBox .racesInfo {
     width: 100%;
     padding: 20px;
     padding-left: 20%; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1024px) {
       .racesBox .racesInfo {
         width: 50%; } }
     .racesBox .racesInfo h1 {
@@ -411,3 +424,58 @@ header nav {
   left: 10vw;
   top: 10vh;
   z-index: 50; }
+
+@keyframes spaceboots {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
+
+#chooseDog {
+  background-color: #fac60e;
+  padding: 10px;
+  padding-left: 20px; }
+  #chooseDog .title {
+    color: #fac60e;
+    background-color: #636261;
+    font-weight: bold;
+    text-align: center; }
+    #chooseDog .title h1 {
+      font-size: 4rem;
+      text-decoration: underline; }
+    #chooseDog .title h2 {
+      font-size: 2rem; }
+  #chooseDog .quiz hr {
+    border-top: 5px double #636261; }
+  #chooseDog .quiz h3 {
+    color: #5c8a9a;
+    font-weight: bold;
+    font-size: 0.75rem; }
+  #chooseDog .quiz form input[type=submit] {
+    background-color: #5c8a9a;
+    color: #fac60e;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    text-align: center; }
+  #chooseDog .quiz form label {
+    font-size: 2rem;
+    line-height: 3rem; }

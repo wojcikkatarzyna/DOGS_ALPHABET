@@ -6,7 +6,7 @@ $grid_containerWidth: 1200px;
 // $grid_large_size: (min-width: 1200px);
 
 @mixin desktop{
-  @media (min-width: 1200px){
+  @media (min-width: 1024px){
     @content;
   }
 }
