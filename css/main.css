@@ -457,12 +457,19 @@ header nav {
     color: #fac60e;
     background-color: #636261;
     font-weight: bold;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    padding: 20px 0; }
     #chooseDog .title h1 {
       font-size: 4rem;
       text-decoration: underline; }
     #chooseDog .title h2 {
       font-size: 2rem; }
+    #chooseDog .title .arrow {
+      color: 10px solid #fac60e;
+      position: absolute;
+      top: 30px;
+      right: 50px; }
   #chooseDog .quiz hr {
     border-top: 5px double #636261; }
   #chooseDog .quiz h3 {
@@ -475,7 +482,11 @@ header nav {
     font-weight: bold;
     padding: 10px;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-size: 2.5rem; }
   #chooseDog .quiz form label {
     font-size: 2rem;
     line-height: 3rem; }
+
+.hideQuiz {
+  display: none; }

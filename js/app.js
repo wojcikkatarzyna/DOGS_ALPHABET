@@ -43,4 +43,17 @@ $(document).ready(function(){
           })
       }
 
+      //TAKE A QUIZ
+      const quiz = $('.quiz');
+      const arrow = $('div .arrow');
+
+      arrow.on('click', function(e){
+        e.preventDefault();
+        console.log('klik');
+        $(this).toggleClass('fa-caret-square-o-down');
+        $(this).toggleClass('fa-caret-square-o-up');
+        quiz.toggleClass('hideQuiz');
+      })
+
+
 })
