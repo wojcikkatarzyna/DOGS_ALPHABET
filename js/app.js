@@ -1,5 +1,5 @@
 import sheltersMaps from './shelters.js';
-
+import sheltersAddress from './sheltersAddress.js';
 
 $(document).ready(function(){
 
@@ -63,21 +63,37 @@ $(document).ready(function(){
       const select = $('select');
       const shelterList = $('.shelterList');
 
-      select.on('change', function(e){
-        e.preventDefault();
-        let url = sheltersMaps[this.selectedIndex].src;
-        console.log(url);
+      function selectProvince(index){
+        //clean previous choice:
         shelterList.empty();
+        //call a map of selected province and create new element - img:
+        let url = sheltersMaps[index].src;
         let newImg = $('<img src="'+url+'">');
         shelterList.append(newImg);
-        console.log(newImg);
-        // let newDiv = $('<div class = "address">');
+
+        //call a list of shelters for selected province and create new element - ul:
+        const newUl=$('<ul>');
+        let list = sheltersAddress[index].map((item) => {
+          let li=$('<li>');
+          let h3=$('<h3>').text(item.city);
+          let p=$('<p>').text(item.address);
+          let hr=$('<hr>');
+          li.append(h3);
+          li.append(p);
+          li.append(hr);
+          newUl.append(li);
+        })
+        shelterList.append(newUl);
+      }
+
+      select.on('change', function(e){
+        e.preventDefault();
+        selectProvince(this.selectedIndex);
       })
 
       //CHOSE PROVINCE FROM MAP:
 
       const mainMap = $('svg');
-      console.log(mainMap);
 
       mainMap.on('click', function(e){
         e.preventDefault();
@@ -149,11 +165,7 @@ $(document).ready(function(){
               break;
          }
          if (ind < 16) {
-            let urlMap = sheltersMaps[ind].src;
-            console.log(urlMap);
-            shelterList.empty();
-            let newImg = $('<img src="'+urlMap+'">');
-            shelterList.append(newImg);
+            selectProvince(ind);
          }
 
       })
