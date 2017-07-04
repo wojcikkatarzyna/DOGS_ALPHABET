@@ -31,9 +31,6 @@
               &:hover > div.letter{
                 display: none;
               }
-              &:hover > span.imgSource{
-                display: block;
-              }
             }
             div.letter{
               width: 100%;
@@ -51,20 +48,6 @@
               }
               @include desktop{
                 font-size: 10vw;
-              }
-            }
-
-            span.imgSource{
-              width: 100%;
-              position: absolute;
-              bottom: 7px;
-              z-index: 25;
-              font-size: 1rem;
-              text-align: center;
-              @include desktop{
-                bottom: -1.5vw;
-                font-size: 0.8rem;
-                display: none;
               }
             }
         }

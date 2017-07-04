@@ -346,9 +346,7 @@ header nav {
             animation-iteration-count: infinite;
             animation-timing-function: linear; }
           #alphabet .row .box:hover > div.letter {
-            display: none; }
-          #alphabet .row .box:hover > span.imgSource {
-            display: block; } }
+            display: none; } }
       #alphabet .row .box div.letter {
         width: 100%;
         height: 100%;
@@ -366,18 +364,6 @@ header nav {
         @media (min-width: 1024px) {
           #alphabet .row .box div.letter {
             font-size: 10vw; } }
-      #alphabet .row .box span.imgSource {
-        width: 100%;
-        position: absolute;
-        bottom: 7px;
-        z-index: 25;
-        font-size: 1rem;
-        text-align: center; }
-        @media (min-width: 1024px) {
-          #alphabet .row .box span.imgSource {
-            bottom: -1.5vw;
-            font-size: 0.8rem;
-            display: none; } }
 
 .hideRacesBox {
   display: none; }
@@ -449,34 +435,34 @@ header nav {
   100% {
     transform: translate(1px, -2px) rotate(-1deg); } }
 
-#chooseDog {
+#matchDog {
   background-color: #fac60e;
   padding: 10px;
   padding-left: 20px; }
-  #chooseDog .title {
+  #matchDog .title {
     color: #fac60e;
     background-color: #636261;
     font-weight: bold;
     text-align: center;
     position: relative;
     padding: 20px 0; }
-    #chooseDog .title h1 {
+    #matchDog .title h1 {
       font-size: 4rem;
       text-decoration: underline; }
-    #chooseDog .title h2 {
+    #matchDog .title h2 {
       font-size: 2rem; }
-    #chooseDog .title .arrow {
+    #matchDog .title .arrow {
       color: 10px solid #fac60e;
       position: absolute;
       top: 30px;
       right: 50px; }
-  #chooseDog .quiz hr {
+  #matchDog .quiz hr {
     border-top: 5px double #636261; }
-  #chooseDog .quiz h3 {
+  #matchDog .quiz h3 {
     color: #5c8a9a;
     font-weight: bold;
     font-size: 0.75rem; }
-  #chooseDog .quiz form input[type=submit] {
+  #matchDog .quiz form input[type=submit] {
     background-color: #5c8a9a;
     color: #fac60e;
     font-weight: bold;
@@ -484,9 +470,31 @@ header nav {
     width: 100%;
     text-align: center;
     font-size: 2.5rem; }
-  #chooseDog .quiz form label {
+  #matchDog .quiz form label {
     font-size: 2rem;
     line-height: 3rem; }
 
 .hideQuiz {
+  display: none; }
+
+#findDog {
+  padding: 25px;
+  justify-content: center;
+  align-items: stretch; }
+  #findDog svg {
+    width: 100%; }
+  #findDog select {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 25px; }
+  #findDog div.info {
+    width: 100%; }
+  #findDog div.shelterList {
+    width: 100%; }
+    #findDog div.shelterList div.maps {
+      width: 50%; }
+    #findDog div.shelterList div.address {
+      width: 50%; }
+
+.hideList {
   display: none; }

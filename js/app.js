@@ -1,3 +1,6 @@
+import sheltersMaps from './shelters.js';
+
+
 $(document).ready(function(){
 
     // MOBILE MENU:
@@ -54,6 +57,23 @@ $(document).ready(function(){
         $(this).toggleClass('fa-caret-square-o-up');
         quiz.toggleClass('hideQuiz');
       })
+
+      //CHOOSE PROVINCE FROM LIST:
+
+      const select = $('select');
+      const shelterList = $('.shelterList');
+
+      select.on('change', function(e){
+        e.preventDefault();
+        let url = sheltersMaps[this.selectedIndex].src;
+        console.log(url);
+        shelterList.empty();
+        let newImg = $('<img src="'+url+'">');
+        shelterList.append(newImg);
+        console.log(newImg);
+        // let newDiv = $('<div class = "address">');
+      })
+
 
 
 })
