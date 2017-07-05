@@ -1,42 +1,55 @@
-#matchDog{
-    background-color: $baseColor2;
-    padding: 10px;
-    padding-left: 20px;
-    .title{
-        color: $baseColor2;
-        background-color: $baseColor3;
-        font-weight: bold;
-        text-align: center;
-        position: relative;
-        padding: 20px 0;
-        h1{
-          font-size: 4rem;
-          text-decoration: underline;
-        }
-        h2{
-          font-size: 2rem;
-        }
-        .arrow{
-            color: 10px solid $baseColor2;
-            position: absolute;
-            top: 30px;
-            right: 50px;
+#matchBreed{
+    header{
+        background: $baseColor3;
+        color: white;
+        .title{
+            border-top: 10px solid $baseColor1;
+            border-bottom: 10px solid $baseColor1;
+            text-align: center;
+            position: relative;
+            height: 150px;
+            h1{
+                font-size: 3rem;
+                font-weight: bold;
+                text-decoration: underline;
+                padding: 15px;
+            }
+            h2{
+                font-size: 2rem;
+            }
+            div{
+                position: absolute;
+                top: 10px;
+                right: 20px;
+            }
         }
     }
+  }
+
+  #matchDog{
     .quiz{
+        padding: 25px;
+        background: rgba(226,226,226,1);
+        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(0%, rgba(87,86,87,1)), color-stop(95%, rgba(219,219,219,1)), color-stop(100%, rgba(254,254,254,1)));
+        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
+        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
+        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
         hr{
           border-top: 5px double $baseColor3;
-
         }
         h3{
           color: $baseColor1;
           font-weight: bold;
-          font-size: 0.75rem;
+          font-size: 1rem;
         }
         form{
+            input[type='radio']{
+                transform: scale(1.5);
+            }
             input[type=submit]{
                 background-color: $baseColor1;
-                color: $baseColor2;
+                color: white;
                 font-weight: bold;
                 padding: 10px;
                 width: 100%;
@@ -46,12 +59,23 @@
             label{
                 font-size: 2rem;
                 line-height: 3rem;
+                padding-left: 10px;
             }
 
         }
     }
-}
+  }
 
-.hideQuiz{
-    display: none;
+.quizResult{
+    div{
+      width: 100%;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+    ul{
+        li{
+            display: inline-block;
+            width: 33%;
+        }
+    }
 }

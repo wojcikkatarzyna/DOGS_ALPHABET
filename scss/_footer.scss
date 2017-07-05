@@ -1,16 +1,14 @@
 footer{
     background: $baseColor3;
     color: white;
-    &::after{
-      background: $baseColor2;
-      height: 5px;
-    }
+    border-top: 10px solid $baseColor1;
     div{
         display: flex;
         justify-content: space-between;
         padding: 15px;
         span{
             width: 50%;
+            font-size: 2rem;
             &:last-of-type{
                 text-align: right;
             }

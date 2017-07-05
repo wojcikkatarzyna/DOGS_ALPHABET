@@ -6,20 +6,36 @@
         width: 100%;
     }
     select{
-        font-size: 1rem;
+        border: 3px solid $baseColor1;
+        font-size: 2rem;
         width: 100%;
         margin-bottom: 25px;
     }
     div.info{
         width: 100%;
+        font-size: 0.75rem;
     }
     div.shelterList{
         width: 100%;
-        div.maps{
-            width: 50%;
+        font-size: 1rem;
+        img{
+            width: 100%;
         }
-        div.address{
-            width: 50%;
+        ul{
+            li{
+                h3{
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: $baseColor1
+                }
+                hr{
+                  border-top: 5px double $baseColor3;
+                }
+                p{
+                    font-size: 0.75rem;
+                }
+            }
+
         }
     }
 }

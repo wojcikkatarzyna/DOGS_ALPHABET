@@ -24,16 +24,19 @@ $(document).ready(function(){
         });
     }
 
-      //TAKE A QUIZ
-      const quiz = $('.quiz');
-      const arrow = $('div .arrow');
+      //drop sections
+
+      const arrow = $('.arrow');
+
 
       arrow.on('click', function(e){
         e.preventDefault();
         console.log('klik');
+        const sectionToHide = $(this).parent().parent().next();
+        console.log(sectionToHide);
         $(this).toggleClass('fa-caret-square-o-down');
         $(this).toggleClass('fa-caret-square-o-up');
-        quiz.toggleClass('hideQuiz');
+        sectionToHide.toggleClass('hide');
       })
 
       //CHOOSE PROVINCE FROM LIST:
@@ -327,6 +330,7 @@ $(document).ready(function(){
                     }
                   }
                 }
+                quizResult.empty();
                 let resultDiv = $('<div>').text('List below contains perfect breeds for you!');
                 let resultUl = $('<ul class="result">');
                 for (let i=0; i<matchBreed.length; i++) {
@@ -356,26 +360,24 @@ $(document).ready(function(){
               const next = $('.next');
               const galleryContent = $('.galleryContent  div');
               let slide = 0;
+              galleryContent.eq(slide).css('z-index', '5');
 
               next.on('click',function(e){
                 e.preventDefault();
-                galleryContent.eq(slide).removeClass('showSlide');
-                galleryContent.eq(slide).addClass('showSlide');
+                galleryContent.eq(slide).css('z-index', '1');
                 slide++;
                 if (slide >galleryContent.length -1) {
                   slide = 0;
                 }
-                galleryContent.eq(slide).removeClass('hideSlide')
-                galleryContent.eq(slide).addClass('showSlide');
+                galleryContent.eq(slide).css('z-index', '5');
               });
 
               prev.on('click',function(){
-                console.log('prec');
-                galleryContent.eq(slide).removeClass('showSlide');
+                galleryContent.eq(slide).css('z-index', '1');
                 slide--;
                 if (slide < 0) {
                   slide = galleryContent.length -1;
                 }
-                galleryContent.eq(slide).addClass('showSlide');
+                galleryContent.eq(slide).css('z-index', '5');
               });
 })
