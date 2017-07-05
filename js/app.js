@@ -226,13 +226,128 @@ $(document).ready(function(){
           })
 
           //CLOSE button
-          const button = $('.close');
 
               $('.racesBox').on('click','.close', function(e) {
                 e.preventDefault();
-                console.log(button);
                 $(this).parent().removeClass('fullScreen');
                 $(this).parent().addClass('hideRacesBox');
               })
+
+          // MATCH A PERFECT BREED:
+
+              const checkBtn = $('.check input');
+              console.log(checkBtn);
+
+
+              checkBtn.on('click', function(e) {
+                e.preventDefault();
+
+                const allInputs = $('form input');
+                const quizResult = $('.quizResult');
+                const matchBreed = [];
+                let resultInfo = 'List below contains perfect breeds for you!';
+
+                // pick only small dogs, for them
+                //it doesnt matter if owner has a garden or no
+                if (allInputs[0].checked) {
+                  for (let i=0; i<dogInfo.length; i++) {
+                    if (dogInfo[i].size === "small") {
+                      matchBreed.push(dogInfo[i]);
+                    }
+                  }
+                // pick only medium size dogs, for them
+                //it doesnt matter if owner has a garden or no
+                } else if (allInputs[1].checked) {
+                  for (let i=0; i<dogInfo.length; i++) {
+                    if (dogInfo[i].size === "medium") {
+                      matchBreed.push(dogInfo[i]);
+                    }
+                  }
+                // if user chose large dog, check the living conditions
+              } else if (allInputs[2].checked) {
+                if (allInputs[8].checked && !allInputs[3].checked) {
+                  for (let i=0; i<dogInfo.length; i++) {
+                    if (dogInfo[i].size === "large" ) {
+                      matchBreed.push(dogInfo[i]);
+                    }
+                  }
+                } else if (allInputs[9].checked && (allInputs[5].checked || allInputs[7].checked)) {
+                  for (let i=0; i<dogInfo.length; i++) {
+                    if (dogInfo[i].size === "large" ) {
+                      matchBreed.push(dogInfo[i]);
+                    }
+                  }
+                } else {
+                  let resultDiv = $('<div>').text('Your living conditions isnt right for large dog');
+                  quizResult.append(resultDiv);
+                }
+              }
+
+              //check condition with kids:
+              if (matchBreed.length > 0) {
+                if (allInputs[11].checked || allInputs[13].checked) {
+                  for (let i=0; i<matchBreed.length; i++) {
+                    if (matchBreed[i].kidsFiendly === "no"){
+                      matchBreed.splice(i, 1);
+                    }
+                  }
+                }
+              } else {
+                let resultDiv = $('<div>').text('Unfortunately, there is no perfect match for you!');
+                quizResult.append(resultDiv);
+              }
+
+              //check condition with dog:
+
+              if (matchBreed.length > 0) {
+                if (allInputs[14].checked) {
+                  for (let i=0; i<matchBreed.length; i++) {
+                    if (matchBreed[i].dogFriendly === "no"){
+                      matchBreed.splice(i, 1);
+                    }
+                  }
+                }
+              } else {
+                return resultInfo = 'Unfortunately, there is no perfect match for you!';
+              }
+
+              //check condition with dog:
+
+              if (matchBreed.length > 0) {
+                if (allInputs[16].checked) {
+                  for (let i=0; i<matchBreed.length; i++) {
+                    if (matchBreed[i].fur === "long"){
+                      matchBreed.splice(i, 1);
+                    }
+                  }
+                } else if (allInputs[17].checked) {
+                  for (let i=0; i<matchBreed.length; i++) {
+                    if (matchBreed[i].fur === "short"){
+                      matchBreed.splice(i, 1);
+                    }
+                  }
+                }
+                let resultDiv = $('<div>').text('List below contains perfect breeds for you!');
+                let resultUl = $('<ul class="result">');
+                for (let i=0; matchBreed.length; i++) {
+                  let name = $('<span>');
+                  name.text($(this).breed);
+                  let imageSrc = $(this).src;
+                  let image = $('<img>');
+                  image.attr('src',imageSrc);
+                  let resultLi = $('<li>');
+                  resultLi.append(name);
+                  resultLi.append(image);
+                  resultUl.append(resultLi);
+                }
+                quizResult.append(resultUl);
+              } else {
+                let resultDiv = $('<div>').text('Unfortunately, there is no perfect match for you!');
+                quizResult.append(resultDiv);
+              }
+
+              })
+
+
 
 })

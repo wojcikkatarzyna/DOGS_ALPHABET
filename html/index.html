@@ -181,17 +181,11 @@
                       <hr />
                       <h3>What size dog are you looking for?</h3>
                       <form>
-                          <input type="radio" name="size" value="small" checked/>
+                          <input type="radio" name="size" value="small"/>
                           <label for="size">small</label>
-                          <br />
-                          <input type="radio" name="size" value="small/medium" />
-                          <label for="size">small/medium</label>
-                          <br />
+                          <br / />
                           <input type="radio" name="size" value="medium" />
                           <label for="size">medium</label>
-                          <br />
-                          <input type="radio" name="size" value="medium/large" />
-                          <label for="size">medium/large</label>
                           <br />
                           <input type="radio" name="size" value="large" />
                           <label for="size">large</label>
@@ -201,51 +195,55 @@
                       <h3>What are your living conditions?</h3>
                       <form>
                           <input type="radio" name="home" value="small/no garden"/>
-                          <label for="home">small apartment with no garden:</label>
+                          <label for="home">small apartment with no garden</label>
                           <br />
                           <input type="radio" name="home" value="medium/no garden" />
-                          <label for="home">medium-sized apartment with no garden:</label>
+                          <label for="home">medium-sized apartment with no garden</label>
                           <br />
                           <input type="radio" name="home" value="medium/garden" />
-                          <label for="home">medium-sized apartment with a garden:</label>
+                          <label for="home">medium-sized apartment with a garden</label>
                           <br / />
                           <input type="radio" name="home" value="large/no garden" />
-                          <label for="home">large apartment with no garden:</label>
+                          <label for="home">large apartment with no garden</label>
                           <br />
                           <input type="radio" name="home" value="large/garden" />
-                          <label for="home">large apartment / house with a garden:</label>
+                          <label for="home">large apartment / house with a garden</label>
+                          <br />
+                      </form>
+                      <hr />
+                      <h3>Do you live near a park or forrest?</h3>
+                      <form>
+                          <input type="radio" name="park" value="small/no garden"/>
+                          <label for="home">yes</label>
+                          <br />
+                          <input type="radio" name="home" value="medium/no garden" />
+                          <label for="home">no</label></label>
                           <br />
                       </form>
                       <hr />
                       <h3>Do you have little kids?</h3>
                       <form>
                           <input type="radio" name="kids" value="no/no" />
-                          <label for="kids">No, I don't have kids and I'm not planning any within the next few years:</label>
+                          <label for="kids">No, I don't have kids and I'm not planning any within the next few years</label>
                           <br />
                           <input type="radio" name="kids" value="no/yes" />
-                          <label for="kids">No, I don't have kids but I'm planning have some within the next few years:</label>
+                          <label for="kids">No, I don't have kids but I'm planning have some within the next few years</label>
                           <br />
                           <input type="radio" name="kids" value="yes/above" />
                           <label for="kids">Yes, I have kids (all above 10 years old)</label>
                           <br />
                           <input type="radio" name="kids" value="yes/under" />
-                          <label for="kids">Yes, I have kids (all under 10 years old)</label>
+                          <label for="kids">Yes, I have kids (under 10 years old)</label>
                           <br />
                       </form>
                       <hr />
-                      <h3>How would you rate your health and level of activity?</h3>
+                      <h3>Do you already have a dog?</h3>
                       <form>
-                          <input type="radio" name="health" value="active" />
-                          <label for="health">My health is excellent and I love being active</label>
+                          <input type="radio" name="dog" value="no/no" />
+                          <label for="dog">Yes</label>
                           <br />
-                          <input type="radio" name="health" value="medium active" />
-                          <label for="health">My health is fine but I'm not a sport person</label>
-                          <br />
-                          <input type="radio" name="health" value="medium active" />
-                          <label for="health">I'm not a young person but a sport is very important for me</label>
-                          <br />
-                          <input type="radio" name="health" value="no active" />
-                          <label for="health">I have some problems with health, that's why I'm not a active person</label>
+                          <input type="radio" name="dog" value="no/yes" />
+                          <label for="dog">No</label>
                           <br />
                       </form>
                       <hr />
@@ -262,9 +260,12 @@
                           <br />
                       </form>
                       <hr />
-                      <form>
+                      <form class="check">
                           <input type="submit" value="CHECK WHAT BREED IS PERFECT FOR YOU !">
                       </form>
+                </div>
+                <div class="quizResult">
+
                 </div>
             </div>
             <div  id="findDog" class="name col-s-6 col-l-3">
