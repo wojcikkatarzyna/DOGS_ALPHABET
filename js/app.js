@@ -169,6 +169,50 @@ $(document).ready(function(){
 
                 const h3=$('<h3>').text(dogInfo[i].breed);
                 racesInfos.append(h3);
+                const countryTitle=$('<h5 class="infoTitle">').text('Country of origins: ');
+                const country=$('<span class="info">').text(dogInfo[i].country);
+                racesInfos.append(countryTitle);
+                racesInfos.append(country);
+
+                const sizeTitle=$('<h5 class="infoTitle">').text('Size: ');
+                const size=$('<span class="info">').text(dogInfo[i].size);
+                racesInfos.append(sizeTitle);
+                racesInfos.append(size);
+
+                const lifeSpanTitle=$('<h5 class="infoTitle">').text('Life span: ');
+                const lifeSpan=$('<span class="info">').text(dogInfo[i].lifeSpan);
+                racesInfos.append(lifeSpanTitle);
+                racesInfos.append(lifeSpan);
+
+                const trainTitle=$('<h5 class="infoTitle">').text('Difficulty of train: ');
+                const trainSpan=$('<span class="info">').text(dogInfo[i].train);
+                racesInfos.append(trainTitle);
+                racesInfos.append(trainSpan);
+
+                const kidsFiendlyTitle=$('<h5 class="infoTitle">').text('Kids fiendly: ');
+                const kidsFiendlySpan=$('<span class="info">').text(dogInfo[i].kidsFiendly);
+                racesInfos.append(kidsFiendlyTitle);
+                racesInfos.append(kidsFiendlySpan);
+
+                const dogFiendlyTitle=$('<h5 class="infoTitle">').text('Dogs fiendly: ');
+                const dogFiendlySpan=$('<span class="info">').text(dogInfo[i].dogFiendly);
+                racesInfos.append(dogFiendlyTitle);
+                racesInfos.append(dogFiendlySpan);
+
+                const furTitle=$('<h5 class="infoTitle">').text('Length of fur: ');
+                const furSpan=$('<span class="info">').text(dogInfo[i].fur);
+                racesInfos.append(furTitle);
+                racesInfos.append(furSpan);
+
+                const gardenTitle=$('<h5 class="infoTitle">').text('House with garden: ');
+                const gardenSpan=$('<span class="info">').text(dogInfo[i].garden);
+                racesInfos.append(gardenTitle);
+                racesInfos.append(gardenSpan);
+
+                const temperamentTitle=$('<h5 class="infoTitle">').text('Short description: ');
+                const temperamentSpan=$('<span class="info">').text(dogInfo[i].temperament);
+                racesInfos.append(temperamentTitle);
+                racesInfos.append(temperamentSpan);
 
                 const newRaceBtn = $('<button class="close">');
                 newRaceBtn.text('X');
