@@ -3,75 +3,76 @@
   background-color: $baseColor3;
 }
 header{
-
-
-    .name{
-        @extend %head;
-        @include desktop{
-          text-align: center;
-          min-height: 200px;
-          color: $baseColor2;
-          background-color: $baseColor1;
-        };
-        .title{
-            font-size: 3rem;
-            font-weight: bold;
-            padding-left: 15px;
-            min-height: 75px;
-            line-height: 75px;
+    >div{
+        border-bottom: 10px solid $baseColor1;
+        .name{
+            @extend %head;
             @include desktop{
-              font-size: 5rem;
-              height: 125px;
-              line-height: 150px;
+              text-align: center;
+              min-height: 200px;
+              color: $baseColor2;
+              background-color: $baseColor1;
             };
-        }
-        .description{
-            display: none;
-            @include desktop{
-              display: block;
-              height: 75px;
+            .title{
+                font-size: 2.5rem;
+                font-weight: bold;
+                padding-left: 15px;
+                min-height: 75px;
+                line-height: 75px;
+                @include desktop{
+                  font-size: 5rem;
+                  height: 125px;
+                  line-height: 150px;
+                };
+            }
+            .description{
+                display: none;
+                @include desktop{
+                  display: block;
+                  height: 75px;
+                }
             }
         }
-    }
-
-    nav{
-      text-align: center;
-      text-align: right;
-      @extend %head;
-      .mobileMenu{
-        min-height: 75px;
-        padding-right: 15px;
-        padding-top: 5px;
-        @include desktop{
-          display: none;
-        };
-      }
-      a{
-        text-decoration: none;
-        @extend %head;
-      }
-      ul{
-        display: none;
-        @include desktop{
-          display: flex;
-          justify-content: space-around;
-        }
-        li{
-          list-style: none;
+        nav{
           text-align: center;
-          line-height: 65px;
-          min-height: 65px;
-          &:nth-of-type(2){
-            border-left: 5px solid rgb(172, 166, 166);
-            border-right: 5px solid rgb(172, 166, 166);
+          text-align: right;
+          @extend %head;
+          .mobileMenu{
+            min-height: 75px;
+            padding-right: 15px;
+            padding-top: 5px;
+            @include desktop{
+              display: none;
+            };
           }
-          @include desktop{
-            width: 33.333%;
-          };
+          a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+          }
+          ul{
+            display: none;
+            @include desktop{
+              display: flex;
+              justify-content: space-around;
+            }
+            li{
+              list-style: none;
+              text-align: center;
+              line-height: 65px;
+              min-height: 65px;
+              &:nth-of-type(2){
+                border-left: 5px solid rgb(172, 166, 166);
+                border-right: 5px solid rgb(172, 166, 166);
+              }
+              @include desktop{
+                width: 33.333%;
+              };
+            }
+          }
         }
-      }
     }
-}
+  }
 
 .showMenu{
   display: block;

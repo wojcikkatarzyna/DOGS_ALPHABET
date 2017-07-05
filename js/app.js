@@ -350,6 +350,32 @@ $(document).ready(function(){
 
               })
 
+              // SLIDER IN GALLERY:
 
+              const prev = $('.prev');
+              const next = $('.next');
+              const galleryContent = $('.galleryContent  div');
+              let slide = 0;
 
+              next.on('click',function(e){
+                e.preventDefault();
+                galleryContent.eq(slide).removeClass('showSlide');
+                galleryContent.eq(slide).addClass('showSlide');
+                slide++;
+                if (slide >galleryContent.length -1) {
+                  slide = 0;
+                }
+                galleryContent.eq(slide).removeClass('hideSlide')
+                galleryContent.eq(slide).addClass('showSlide');
+              });
+
+              prev.on('click',function(){
+                console.log('prec');
+                galleryContent.eq(slide).removeClass('showSlide');
+                slide--;
+                if (slide < 0) {
+                  slide = galleryContent.length -1;
+                }
+                galleryContent.eq(slide).addClass('showSlide');
+              });
 })

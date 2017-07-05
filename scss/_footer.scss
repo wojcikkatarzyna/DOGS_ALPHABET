@@ -1,0 +1,19 @@
+footer{
+    background: $baseColor3;
+    color: white;
+    &::after{
+      background: $baseColor2;
+      height: 5px;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        span{
+            width: 50%;
+            &:last-of-type{
+                text-align: right;
+            }
+        }
+    }
+}

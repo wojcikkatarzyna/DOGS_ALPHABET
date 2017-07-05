@@ -245,67 +245,68 @@ input[type=button] {
       width: 100%; } }
 
 body {
-  font-size: 30px; }
+  font-size: 20px; }
 
-header .name, header nav, header nav a {
+header > div .name, header > div nav {
   color: white;
   background-color: #636261; }
 
-@media (min-width: 1024px) {
-  header .name {
-    text-align: center;
-    min-height: 200px;
-    color: #fac60e;
-    background-color: #5c8a9a; } }
-
-header .name .title {
-  font-size: 3rem;
-  font-weight: bold;
-  padding-left: 15px;
-  min-height: 75px;
-  line-height: 75px; }
+header > div {
+  border-bottom: 10px solid #1fabdb; }
   @media (min-width: 1024px) {
-    header .name .title {
-      font-size: 5rem;
-      height: 125px;
-      line-height: 150px; } }
-
-header .name .description {
-  display: none; }
-  @media (min-width: 1024px) {
-    header .name .description {
-      display: block;
-      height: 75px; } }
-
-header nav {
-  text-align: center;
-  text-align: right; }
-  header nav .mobileMenu {
+    header > div .name {
+      text-align: center;
+      min-height: 200px;
+      color: #fac60e;
+      background-color: #1fabdb; } }
+  header > div .name .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 15px;
     min-height: 75px;
-    padding-right: 15px;
-    padding-top: 5px; }
+    line-height: 75px; }
     @media (min-width: 1024px) {
-      header nav .mobileMenu {
-        display: none; } }
-  header nav a {
-    text-decoration: none; }
-  header nav ul {
+      header > div .name .title {
+        font-size: 5rem;
+        height: 125px;
+        line-height: 150px; } }
+  header > div .name .description {
     display: none; }
     @media (min-width: 1024px) {
-      header nav ul {
-        display: flex;
-        justify-content: space-around; } }
-    header nav ul li {
-      list-style: none;
-      text-align: center;
-      line-height: 65px;
-      min-height: 65px; }
-      header nav ul li:nth-of-type(2) {
-        border-left: 5px solid #aca6a6;
-        border-right: 5px solid #aca6a6; }
+      header > div .name .description {
+        display: block;
+        height: 75px; } }
+  header > div nav {
+    text-align: center;
+    text-align: right; }
+    header > div nav .mobileMenu {
+      min-height: 75px;
+      padding-right: 15px;
+      padding-top: 5px; }
       @media (min-width: 1024px) {
-        header nav ul li {
-          width: 33.333%; } }
+        header > div nav .mobileMenu {
+          display: none; } }
+    header > div nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem; }
+    header > div nav ul {
+      display: none; }
+      @media (min-width: 1024px) {
+        header > div nav ul {
+          display: flex;
+          justify-content: space-around; } }
+      header > div nav ul li {
+        list-style: none;
+        text-align: center;
+        line-height: 65px;
+        min-height: 65px; }
+        header > div nav ul li:nth-of-type(2) {
+          border-left: 5px solid #aca6a6;
+          border-right: 5px solid #aca6a6; }
+        @media (min-width: 1024px) {
+          header > div nav ul li {
+            width: 33.333%; } }
 
 .showMenu {
   display: block; }
@@ -313,8 +314,57 @@ header nav {
     border: transparent;
     border-top: 5px solid #aca6a6; }
 
-#gallery {
-  min-height: 200px; }
+#gallery > div {
+  background: #e2e2e2;
+  background: -moz-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(0%, #575657), color-stop(95%, #dbdbdb), color-stop(100%, #fefefe));
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
+  background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
+  background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
+  #gallery > div .prev, #gallery > div .next {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #1fabdb;
+      transform: rotate(45deg);
+      line-height: 200px; }
+    #gallery > div .prev .arrowLeft, #gallery > div .next .arrowLeft {
+      border-top: transparent;
+      border-right: transparent; }
+    #gallery > div .prev .arrowRigth, #gallery > div .next .arrowRigth {
+      border-bottom: transparent;
+      border-left: transparent; }
+  #gallery > div .galleryContent {
+    height: 200px; }
+    #gallery > div .galleryContent div {
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      #gallery > div .galleryContent div h2 {
+        font-size: 3.5rem;
+        font-weight: bold; }
+      #gallery > div .galleryContent div a {
+        color: white;
+        font-size: 1.5rem;
+        background: #1fabdb;
+        border-radius: 25px;
+        width: 200px;
+        height: 50px;
+        margin-top: 50px;
+        padding: 15px 30px;
+        align-self: center; }
+
+.showSlide {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around; }
+
+.hideSlide {
+  display: none; }
 
 #alphabet {
   min-height: 1000px; }
@@ -323,7 +373,7 @@ header nav {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
-    background-color: #5c8a9a; }
+    background-color: #1fabdb; }
     #alphabet .row .box {
       width: 30vw;
       height: 30vw;
@@ -459,11 +509,11 @@ header nav {
   #matchDog .quiz hr {
     border-top: 5px double #636261; }
   #matchDog .quiz h3 {
-    color: #5c8a9a;
+    color: #1fabdb;
     font-weight: bold;
     font-size: 0.75rem; }
   #matchDog .quiz form input[type=submit] {
-    background-color: #5c8a9a;
+    background-color: #1fabdb;
     color: #fac60e;
     font-weight: bold;
     padding: 10px;
@@ -498,3 +548,18 @@ header nav {
 
 .hideList {
   display: none; }
+
+footer {
+  background: #636261;
+  color: white; }
+  footer::after {
+    background: #fac60e;
+    height: 5px; }
+  footer div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px; }
+    footer div span {
+      width: 50%; }
+      footer div span:last-of-type {
+        text-align: right; }
