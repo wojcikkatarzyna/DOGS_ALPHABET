@@ -329,10 +329,11 @@ $(document).ready(function(){
                 }
                 let resultDiv = $('<div>').text('List below contains perfect breeds for you!');
                 let resultUl = $('<ul class="result">');
-                for (let i=0; matchBreed.length; i++) {
+                for (let i=0; i<matchBreed.length; i++) {
+                  console.log(matchBreed[i].breed);
                   let name = $('<span>');
-                  name.text($(this).breed);
-                  let imageSrc = $(this).src;
+                  name.text(matchBreed[i].breed);
+                  let imageSrc = matchBreed[i].src;
                   let image = $('<img>');
                   image.attr('src',imageSrc);
                   let resultLi = $('<li>');
@@ -340,6 +341,7 @@ $(document).ready(function(){
                   resultLi.append(image);
                   resultUl.append(resultLi);
                 }
+                quizResult.append(resultDiv);
                 quizResult.append(resultUl);
               } else {
                 let resultDiv = $('<div>').text('Unfortunately, there is no perfect match for you!');
