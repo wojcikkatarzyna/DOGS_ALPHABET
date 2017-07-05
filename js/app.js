@@ -1,5 +1,6 @@
 import sheltersMaps from './shelters.js';
 import sheltersAddress from './sheltersAddress.js';
+import dogInfo from './dogInfo.js';
 
 $(document).ready(function(){
 
@@ -22,29 +23,6 @@ $(document).ready(function(){
         'background-repeat':'no-repeat'
         });
     }
-
-    //THUMBNAILS EVENT
-    const racesBox = $('#races .racesBox');
-
-    for (let i=0; i<boxes.length; i++){
-        boxes.on('click', function(e) {
-          e.preventDefault();
-          $(this).next().removeClass('hideRacesBox');
-          $(this).next().addClass('fullScreen');
-        })
-      }
-
-      //CLOSE button
-      const alphabet = $('#alphabet');
-      const buttons = $('.racesBox button');
-
-      for (let i=0; i<buttons.length; i++){
-          buttons.eq(i).on('click', function(e) {
-            e.preventDefault();
-            buttons.eq(i).parent().removeClass('fullScreen');
-            buttons.eq(i).parent().addClass('hideRacesBox');
-          })
-      }
 
       //TAKE A QUIZ
       const quiz = $('.quiz');
@@ -170,5 +148,47 @@ $(document).ready(function(){
 
       })
 
+      // GET INFO ABOUT SELECTED BREED:
+
+      const racesBoxs = $('#races .racesBox');
+      const racesImages = $('.racesImage');
+      const racesInfos = $('.racesInfo');
+      const breeds = $('#alphabet .box');
+
+          breeds.on('click', function(e) {
+            e.preventDefault();
+            const currentLetter = $(this).children().text();
+            console.log(currentLetter);
+            racesImages.empty();
+            racesInfos.empty();
+            for (let i=0; i<dogInfo.length; i++) {
+              if (dogInfo[i].letter === currentLetter) {
+                const srcImg = dogInfo[i].src;
+                const newRaceImg = $('<img src="'+srcImg+'">');
+                racesImages.append(newRaceImg);
+
+                const h3=$('<h3>').text(dogInfo[i].breed);
+                racesInfos.append(h3);
+
+                const newRaceBtn = $('<button class="close">');
+                newRaceBtn.text('X');
+                racesInfos.after(newRaceBtn);
+
+                racesInfos.parent().addClass('fullScreen');
+                racesInfos.parent().removeClass('hideRacesBox');
+
+              }
+            }
+          })
+
+          //CLOSE button
+          const button = $('.close');
+
+              $('.racesBox').on('click','.close', function(e) {
+                e.preventDefault();
+                console.log(button);
+                $(this).parent().removeClass('fullScreen');
+                $(this).parent().addClass('hideRacesBox');
+              })
 
 })
