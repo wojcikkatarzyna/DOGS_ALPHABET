@@ -252,7 +252,13 @@ header > div .name, header > div nav {
   background-color: #575657; }
 
 header > div {
-  border-bottom: 10px solid #1fabdb; }
+  border-bottom: 5px solid #1fabdb; }
+  @media (min-width: 765px) {
+    header > div {
+      border-bottom: 10px solid #1fabdb; } }
+  @media (min-width: 1024px) {
+    header > div {
+      border-bottom: 10px solid #1fabdb; } }
   @media (min-width: 1024px) {
     header > div .name {
       text-align: center;
@@ -435,17 +441,21 @@ header > div {
     background: #575657;
     color: white; }
     #alphabet header .title {
-      border-top: 10px solid #1fabdb;
-      border-bottom: 10px solid #1fabdb;
+      border-top: 5px solid #1fabdb;
+      border-bottom: 5px solid #1fabdb;
       text-align: center;
       position: relative;
       height: 100px; }
       @media (min-width: 765px) {
         #alphabet header .title {
-          height: 150px; } }
+          height: 150px;
+          border-top: 10px solid #1fabdb;
+          border-bottom: 10px solid #1fabdb; } }
       @media (min-width: 1024px) {
         #alphabet header .title {
-          height: 150px; } }
+          height: 150px;
+          border-top: 10px solid #1fabdb;
+          border-bottom: 10px solid #1fabdb; } }
       #alphabet header .title h1 {
         font-size: 1.5rem;
         font-weight: bold;
@@ -654,18 +664,40 @@ header > div {
   background: #575657;
   color: white; }
   #matchBreed header .title {
-    border-top: 10px solid #1fabdb;
-    border-bottom: 10px solid #1fabdb;
+    border-top: 5px solid #1fabdb;
+    border-bottom: 5px solid #1fabdb;
     text-align: center;
     position: relative;
-    height: 150px; }
+    height: 100px; }
+    @media (min-width: 765px) {
+      #matchBreed header .title {
+        height: 150px;
+        border-top: 10px solid #1fabdb;
+        border-bottom: 10px solid #1fabdb; } }
+    @media (min-width: 1024px) {
+      #matchBreed header .title {
+        height: 150px;
+        border-top: 10px solid #1fabdb;
+        border-bottom: 10px solid #1fabdb; } }
     #matchBreed header .title h1 {
-      font-size: 3rem;
+      font-size: 1.5rem;
       font-weight: bold;
       text-decoration: underline;
       padding: 15px; }
+      @media (min-width: 765px) {
+        #matchBreed header .title h1 {
+          font-size: 3rem; } }
+      @media (min-width: 1024px) {
+        #matchBreed header .title h1 {
+          font-size: 3rem; } }
     #matchBreed header .title h2 {
-      font-size: 2rem; }
+      font-size: 1rem; }
+      @media (min-width: 765px) {
+        #matchBreed header .title h2 {
+          font-size: 2rem; } }
+      @media (min-width: 1024px) {
+        #matchBreed header .title h2 {
+          font-size: 2rem; } }
     #matchBreed header .title div {
       position: absolute;
       top: 10px;
@@ -680,7 +712,7 @@ header > div {
   background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
   background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
   #matchDog .quiz hr {
-    border-top: 5px double #575657; }
+    border-top: 5px double #1fabdb; }
   #matchDog .quiz h3 {
     color: #1fabdb;
     font-weight: bold;
@@ -688,8 +720,12 @@ header > div {
     @media (min-width: 765px) {
       #matchDog .quiz h3 {
         font-size: 2rem; } }
-  #matchDog .quiz form input[type='radio'] {
-    transform: scale(1.5); }
+  @media (min-width: 765px) {
+    #matchDog .quiz form input[type='radio'] {
+      transform: scale(1.5); } }
+  @media (min-width: 1024px) {
+    #matchDog .quiz form input[type='radio'] {
+      transform: scale(1.5); } }
   #matchDog .quiz form input[type=submit] {
     background-color: #1fabdb;
     color: white;
@@ -697,22 +733,36 @@ header > div {
     padding: 10px;
     width: 100%;
     text-align: center;
-    font-size: 2.5rem; }
+    font-size: 1.5rem; }
+    @media (min-width: 765px) {
+      #matchDog .quiz form input[type=submit] {
+        font-size: 2rem; } }
+    @media (min-width: 1024px) {
+      #matchDog .quiz form input[type=submit] {
+        font-size: 2.5rem; } }
   #matchDog .quiz form label {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 1rem;
     padding-left: 10px; }
     @media (min-width: 765px) {
       #matchDog .quiz form label {
-        font-size: 1.5rem; } }
+        font-size: 1.5rem;
+        line-height: 2rem; } }
+    @media (min-width: 1024px) {
+      #matchDog .quiz form label {
+        font-size: 2rem;
+        line-height: 2.5rem; } }
 
 .quizResult div {
   width: 100%;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px; }
   @media (min-width: 765px) {
+    .quizResult div {
+      font-size: 2rem; } }
+  @media (min-width: 1024px) {
     .quizResult div {
       font-size: 2rem; } }
 
@@ -722,10 +772,10 @@ header > div {
   width: 100%; }
   @media (min-width: 765px) {
     .quizResult ul li {
-      width: 50%; } }
+      width: 40%; } }
   @media (min-width: 1024px) {
     .quizResult ul li {
-      width: 33%; } }
+      width: 30%; } }
 
 #findDog {
   padding: 25px;

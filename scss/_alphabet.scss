@@ -8,16 +8,20 @@
         background: $baseColor3;
         color: white;
         .title{
-            border-top: 10px solid $baseColor1;
-            border-bottom: 10px solid $baseColor1;
+            border-top: 5px solid $baseColor1;
+            border-bottom: 5px solid $baseColor1;
             text-align: center;
             position: relative;
             height: 100px;
             @include tablet{
               height: 150px;
+              border-top: 10px solid $baseColor1;
+              border-bottom: 10px solid $baseColor1;
             }
             @include desktop{
               height: 150px;
+              border-top: 10px solid $baseColor1;
+              border-bottom: 10px solid $baseColor1;
             }
             h1{
                 font-size: 1.5rem;

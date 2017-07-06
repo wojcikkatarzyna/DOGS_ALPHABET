@@ -4,7 +4,13 @@
 }
 header{
     >div{
+        border-bottom: 5px solid $baseColor1;
+        @include tablet{
         border-bottom: 10px solid $baseColor1;
+        }
+        @include desktop{
+        border-bottom: 10px solid $baseColor1;
+        }
         .name{
             @extend %head;
             @include desktop{

@@ -1,30 +1,52 @@
 #matchBreed{
-    header{
-        background: $baseColor3;
-        color: white;
-        .title{
+  header{
+      background: $baseColor3;
+      color: white;
+      .title{
+          border-top: 5px solid $baseColor1;
+          border-bottom: 5px solid $baseColor1;
+          text-align: center;
+          position: relative;
+          height: 100px;
+          @include tablet{
+            height: 150px;
             border-top: 10px solid $baseColor1;
             border-bottom: 10px solid $baseColor1;
-            text-align: center;
-            position: relative;
+          }
+          @include desktop{
             height: 150px;
-            h1{
+            border-top: 10px solid $baseColor1;
+            border-bottom: 10px solid $baseColor1;
+          }
+          h1{
+              font-size: 1.5rem;
+              font-weight: bold;
+              text-decoration: underline;
+              padding: 15px;
+              @include tablet{
                 font-size: 3rem;
-                font-weight: bold;
-                text-decoration: underline;
-                padding: 15px;
-            }
-            h2{
+              }
+              @include desktop{
+                font-size: 3rem;
+              }
+          }
+          h2{
+              font-size: 1rem;
+              @include tablet{
                 font-size: 2rem;
-            }
-            div{
-                position: absolute;
-                top: 10px;
-                right: 20px;
-            }
-        }
-    }
+              }
+              @include desktop{
+                font-size: 2rem;
+              }
+          }
+          div{
+              position: absolute;
+              top: 10px;
+              right: 20px;
+          }
+      }
   }
+}
 
   #matchDog{
     .quiz{
@@ -36,7 +58,7 @@
         background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
         background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
         hr{
-          border-top: 5px double $baseColor3;
+          border-top: 5px double $baseColor1;
         }
         h3{
           color: $baseColor1;
@@ -48,7 +70,12 @@
         }
         form{
             input[type='radio']{
-                transform: scale(1.5);
+                @include tablet{
+                  transform: scale(1.5);
+                }
+                @include desktop{
+                  transform: scale(1.5);
+                }
             }
             input[type=submit]{
                 background-color: $baseColor1;
@@ -57,14 +84,25 @@
                 padding: 10px;
                 width: 100%;
                 text-align: center;
-                font-size: 2.5rem;
+                font-size: 1.5rem;
+                @include tablet{
+                  font-size: 2rem;
+                }
+                @include desktop{
+                  font-size: 2.5rem;
+                }
             }
             label{
-                font-size: 2rem;
-                line-height: 3rem;
+                font-size: 1rem;
+                line-height: 1rem;
                 padding-left: 10px;
                 @include tablet{
                   font-size: 1.5rem;
+                  line-height: 2rem;
+                }
+                @include desktop{
+                  font-size: 2rem;
+                  line-height: 2.5rem;
                 }
             }
         }
@@ -74,11 +112,14 @@
 .quizResult{
     div{
       width: 100%;
-      font-size: 0.75rem;
+      font-size: 1rem;
       font-weight: bold;
       text-align: center;
       padding-bottom: 10px;
       @include tablet{
+        font-size: 2rem;
+      }
+      @include desktop{
         font-size: 2rem;
       }
     }
@@ -88,10 +129,10 @@
             text-align: center;
             width: 100%;
             @include tablet{
-              width: 50%;
+              width: 40%;
             }
             @include desktop{
-              width: 33%;
+              width: 30%;
             }
         }
     }
