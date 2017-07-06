@@ -193,7 +193,7 @@ input[type=button] {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto; }
   .container .row::before, .container .row::after {
     content: "";
@@ -204,7 +204,7 @@ input[type=button] {
   .container .row [class*='col-'] {
     float: left;
     width: 100%; }
-  @media (min-width: 340px) {
+  @media (min-width: 320px) {
     .container .row .col-s-1 {
       width: 16.66667%; }
     .container .row .col-s-2 {
@@ -217,7 +217,7 @@ input[type=button] {
       width: 83.33333%; }
     .container .row .col-s-6 {
       width: 100%; } }
-  @media (min-width: 780px) {
+  @media (min-width: 765px) {
     .container .row .col-m-1 {
       width: 16.66667%; }
     .container .row .col-m-2 {
@@ -260,11 +260,14 @@ header > div {
       color: white;
       background-color: #1fabdb; } }
   header > div .name .title {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     padding-left: 15px;
     min-height: 75px;
     line-height: 75px; }
+    @media (min-width: 765px) {
+      header > div .name .title {
+        font-size: 2.5rem; } }
     @media (min-width: 1024px) {
       header > div .name .title {
         font-size: 5rem;
@@ -290,7 +293,13 @@ header > div {
     header > div nav a {
       text-decoration: none;
       color: white;
-      font-size: 1.5rem; }
+      font-size: 0.75rem; }
+      @media (min-width: 765px) {
+        header > div nav a {
+          font-size: 1.5rem; } }
+      @media (min-width: 1024px) {
+        header > div nav a {
+          font-size: 1.5rem; } }
     header > div nav ul {
       display: none; }
       @media (min-width: 1024px) {
@@ -300,14 +309,20 @@ header > div {
       header > div nav ul li {
         list-style: none;
         text-align: center;
-        line-height: 65px;
-        min-height: 65px; }
+        line-height: 45px;
+        height: 45px; }
         header > div nav ul li:nth-of-type(2) {
           border-left: 5px solid #aca6a6;
           border-right: 5px solid #aca6a6; }
+        @media (min-width: 765px) {
+          header > div nav ul li {
+            line-height: 65px;
+            min-height: 65px; } }
         @media (min-width: 1024px) {
           header > div nav ul li {
-            width: 33.333%; } }
+            width: 33.333%;
+            line-height: 65px;
+            min-height: 65px; } }
 
 .showMenu {
   display: block; }
@@ -413,14 +428,14 @@ header > div {
       margin: 25px 0;
       border-radius: 25%;
       border: 5px solid #1fabdb; }
-      @media (min-width: 780px) {
+      @media (min-width: 765px) {
         #alphabet .breeds .box {
           width: 18vw;
           height: 18vw; } }
       @media (min-width: 1024px) {
         #alphabet .breeds .box {
-          width: 12vw;
-          height: 12vw; }
+          width: 14vw;
+          height: 14vw; }
           #alphabet .breeds .box:hover {
             animation-name: spaceboots;
             animation-duration: 0.8s;
@@ -440,7 +455,7 @@ header > div {
         text-align: center;
         line-height: 100%;
         border-radius: 25%; }
-        @media (min-width: 780px) {
+        @media (min-width: 765px) {
           #alphabet .breeds .box div.letter {
             font-size: 14vw; } }
         @media (min-width: 1024px) {
@@ -463,19 +478,20 @@ header > div {
     font-weight: bold;
     background-color: #575657; }
   .racesBox .racesImage {
-    width: 100%;
-    border: 1px solid green; }
-    @media (min-width: 780px) {
+    display: inline-block;
+    width: 100%; }
+    @media (min-width: 765px) {
       .racesBox .racesImage {
         width: 50%; } }
     @media (min-width: 1024px) {
       .racesBox .racesImage {
         width: 50%; } }
   .racesBox .racesInfo {
+    display: inline-block;
     width: 100%;
-    border: 1px solid green;
+    height: 100%;
     padding: 25px; }
-    @media (min-width: 780px) {
+    @media (min-width: 765px) {
       .racesBox .racesInfo {
         width: 50%; } }
     @media (min-width: 1024px) {
@@ -483,25 +499,35 @@ header > div {
         width: 50%; } }
     .racesBox .racesInfo h3 {
       padding-bottom: 20px;
-      font-size: 3rem;
+      font-size: 2rem;
       text-decoration: underline;
       color: #1fabdb;
       font-weight: bold; }
-    .racesBox .racesInfo h5 {
+    .racesBox .racesInfo .infoTitle {
       font-weight: bold;
-      font-size: 1.5rem; }
+      font-size: 1.25rem; }
+    .racesBox .racesInfo span.info {
+      margin-bottom: 5px; }
 
 .fullScreen {
   margin: auto auto;
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 80vw;
   height: 80vh;
   left: 10vw;
   top: 10vh;
   z-index: 50; }
+  @media (min-width: 765px) {
+    .fullScreen {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  @media (min-width: 1024px) {
+    .fullScreen {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
 
 @keyframes spaceboots {
   0% {
@@ -562,7 +588,7 @@ header > div {
     color: #1fabdb;
     font-weight: bold;
     font-size: 1rem; }
-    @media (min-width: 780px) {
+    @media (min-width: 765px) {
       #matchDog .quiz h3 {
         font-size: 2rem; } }
   #matchDog .quiz form input[type='radio'] {
@@ -579,7 +605,7 @@ header > div {
     font-size: 2rem;
     line-height: 3rem;
     padding-left: 10px; }
-    @media (min-width: 780px) {
+    @media (min-width: 765px) {
       #matchDog .quiz form label {
         font-size: 1.5rem; } }
 
@@ -589,14 +615,20 @@ header > div {
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px; }
-  @media (min-width: 780px) {
+  @media (min-width: 765px) {
     .quizResult div {
       font-size: 2rem; } }
 
 .quizResult ul li {
   display: inline-block;
-  width: 33%;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
+  @media (min-width: 765px) {
+    .quizResult ul li {
+      width: 50%; } }
+  @media (min-width: 1024px) {
+    .quizResult ul li {
+      width: 33%; } }
 
 #findDog {
   padding: 25px;
@@ -613,7 +645,7 @@ header > div {
     width: 100%;
     font-size: 0.75rem;
     text-align: center; }
-    @media (min-width: 780px) {
+    @media (min-width: 765px) {
       #findDog div.info {
         font-size: 1.5rem; } }
   #findDog div.shelterList {
@@ -621,20 +653,35 @@ header > div {
     font-size: 1rem; }
     #findDog div.shelterList img {
       width: 100%; }
+      @media (min-width: 1024px) {
+        #findDog div.shelterList img {
+          width: 70%;
+          display: inline-block; } }
+    @media (min-width: 1024px) {
+      #findDog div.shelterList ul {
+        width: 30%;
+        height: 100%;
+        display: inline-block; } }
     #findDog div.shelterList ul li h3 {
       font-size: 1rem;
       font-weight: bold;
       color: #1fabdb; }
-      @media (min-width: 780px) {
+      @media (min-width: 765px) {
         #findDog div.shelterList ul li h3 {
-          font-size: 2rem; } }
+          font-size: 1.5rem; } }
+      @media (min-width: 1024px) {
+        #findDog div.shelterList ul li h3 {
+          font-size: 1.5rem; } }
     #findDog div.shelterList ul li hr {
       border-top: 5px double #575657; }
     #findDog div.shelterList ul li p {
       font-size: 0.75rem; }
-      @media (min-width: 780px) {
+      @media (min-width: 765px) {
         #findDog div.shelterList ul li p {
-          font-size: 1.5rem; } }
+          font-size: 1rem; } }
+      @media (min-width: 1024px) {
+        #findDog div.shelterList ul li p {
+          font-size: 1rem; } }
 
 .hideList {
   display: none; }
@@ -650,7 +697,7 @@ footer {
     footer div span {
       width: 50%;
       font-size: 2rem; }
-      @media (min-width: 780px) {
+      @media (min-width: 765px) {
         footer div span {
           font-size: 1.5rem; } }
       footer div span:last-of-type {

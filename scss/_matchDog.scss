@@ -85,8 +85,14 @@
     ul{
         li{
             display: inline-block;
-            width: 33%;
             text-align: center;
+            width: 100%;
+            @include tablet{
+              width: 50%;
+            }
+            @include desktop{
+              width: 33%;
+            }
         }
     }
 }

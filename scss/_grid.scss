@@ -1,6 +1,6 @@
 $grid_numberOfColumns: 6;
 $grid_singleColumnWidth: 100% / $grid_numberOfColumns;
-$grid_containerWidth: 1200px;
+$grid_containerWidth: 100%;
 // $grid_small_size: (min-width: 340px);
 // $grid_middle_size: (min-width: 780px);
 // $grid_large_size: (min-width: 1200px);
@@ -12,13 +12,13 @@ $grid_containerWidth: 1200px;
 }
 
 @mixin tablet{
-  @media (min-width: 780px){
+  @media (min-width: 765px){
     @content;
   }
 }
 
 @mixin smartphone{
-  @media (min-width: 340px){
+  @media (min-width: 320px){
     @content;
   }
 }
