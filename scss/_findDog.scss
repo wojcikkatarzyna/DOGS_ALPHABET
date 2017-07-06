@@ -7,13 +7,17 @@
     }
     select{
         border: 3px solid $baseColor1;
-        font-size: 2rem;
+        font-size: 1rem;
         width: 100%;
         margin-bottom: 25px;
     }
     div.info{
         width: 100%;
         font-size: 0.75rem;
+        text-align: center;
+        @include tablet{
+          font-size: 1.5rem;
+        }
     }
     div.shelterList{
         width: 100%;
@@ -26,13 +30,19 @@
                 h3{
                     font-size: 1rem;
                     font-weight: bold;
-                    color: $baseColor1
+                    color: $baseColor1;
+                    @include tablet{
+                      font-size: 2rem;
+                    }
                 }
                 hr{
                   border-top: 5px double $baseColor3;
                 }
                 p{
                     font-size: 0.75rem;
+                    @include tablet{
+                      font-size: 1.5rem;
+                    }
                 }
             }
 

@@ -42,6 +42,9 @@
           color: $baseColor1;
           font-weight: bold;
           font-size: 1rem;
+          @include tablet{
+            font-size: 2rem;
+          }
         }
         form{
             input[type='radio']{
@@ -60,8 +63,10 @@
                 font-size: 2rem;
                 line-height: 3rem;
                 padding-left: 10px;
+                @include tablet{
+                  font-size: 1.5rem;
+                }
             }
-
         }
     }
   }
@@ -70,12 +75,18 @@
     div{
       width: 100%;
       font-size: 0.75rem;
+      font-weight: bold;
       text-align: center;
+      padding-bottom: 10px;
+      @include tablet{
+        font-size: 2rem;
+      }
     }
     ul{
         li{
             display: inline-block;
             width: 33%;
+            text-align: center;
         }
     }
 }

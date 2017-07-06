@@ -10,7 +10,7 @@ header{
             @include desktop{
               text-align: center;
               min-height: 200px;
-              color: $baseColor2;
+              color: white;
               background-color: $baseColor1;
             };
             .title{
@@ -30,6 +30,7 @@ header{
                 @include desktop{
                   display: block;
                   height: 75px;
+                  font-size: 2rem;
                 }
             }
         }
