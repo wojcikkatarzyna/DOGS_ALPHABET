@@ -7,12 +7,22 @@
         position: relative;
         button{
             position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 1.5rem;
+            top: 10px;
+            right: 10px;
+            font-size: 0.75rem;
             color: white;
             font-weight: bold;
             background-color: $baseColor3;
+            @include tablet{
+                font-size: 1.5rem;
+                top: 20px;
+                right: 20px;
+              }
+            @include desktop{
+                font-size: 1.5rem;
+                top: 20px;
+                right: 20px;
+              }
         }
         .racesImage{
           display: inline-block;
@@ -36,18 +46,38 @@
                 width: 50%;
             }
             h3{
-                padding-bottom: 20px;
-                font-size: 2rem;
+                font-size: 1.25rem;
                 text-decoration: underline;
                 color: $baseColor1;
                 font-weight: bold;
+                @include tablet{
+                    font-size: 2rem;
+                    padding: 10px 0;
+                  }
+                @include desktop{
+                    font-size: 2.5rem;
+                    padding: 30px 0;
+                }
             }
             .infoTitle{
                 font-weight: bold;
-                font-size: 1.25rem;
+                font-size: 0.65rem;
+                @include tablet{
+                    font-size: 1.25rem;
+                  }
+                @include desktop{
+                    font-size: 1.75rem;
+                }
             }
             span.info{
-                margin-bottom: 5px;
+                padding-bottom: 15px;
+                font-size: 0.65rem;
+                @include tablet{
+                    font-size: 1.25rem;
+                  }
+                @include desktop{
+                    font-size: 1.75rem;
+                }
             }
         }
     }
@@ -58,18 +88,26 @@
     position: fixed;
     display: inline-block;
     width: 80vw;
-    height: 80vh;
+    height: 90vh;
     left: 10vw;
-    top: 10vh;
+    top: 5vh;
     z-index: 50;
     @include tablet{
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 80vw;
+        height: 80vh;
+        left: 10vw;
+        top: 10vh;
       }
     @include desktop{
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 80vw;
+        height: 80vh;
+        left: 10vw;
+        top: 10vh;
     }
 }

@@ -338,16 +338,30 @@ header > div {
   background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
   background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
   #gallery > div .prev, #gallery > div .next {
-    height: 200px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (min-width: 765px) {
+      #gallery > div .prev, #gallery > div .next {
+        height: 200px; } }
+    @media (min-width: 1024px) {
+      #gallery > div .prev, #gallery > div .next {
+        height: 250px; } }
     #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
-      width: 50px;
-      height: 50px;
+      width: 25px;
+      height: 25px;
       border: 5px solid #1fabdb;
       transform: rotate(45deg);
       line-height: 200px; }
+      @media (min-width: 765px) {
+        #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
+          width: 50px;
+          height: 50px; } }
+      @media (min-width: 1024px) {
+        #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
+          width: 50px;
+          height: 50px; } }
     #gallery > div .prev .arrowLeft, #gallery > div .next .arrowLeft {
       border-top: transparent;
       border-right: transparent; }
@@ -355,13 +369,20 @@ header > div {
       border-bottom: transparent;
       border-left: transparent; }
   #gallery > div .galleryContent {
-    height: 200px;
+    height: 150px;
     position: relative; }
+    @media (min-width: 765px) {
+      #gallery > div .galleryContent {
+        height: 200px; } }
+    @media (min-width: 1024px) {
+      #gallery > div .galleryContent {
+        height: 250px; } }
     #gallery > div .galleryContent div {
       height: 100%;
       width: 100%;
       text-align: center;
       position: absolute;
+      padding: 20px 0;
       top: 0;
       display: flex;
       flex-direction: column;
@@ -372,18 +393,38 @@ header > div {
       background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
       background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
       #gallery > div .galleryContent div h2 {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         font-weight: bold; }
+        @media (min-width: 765px) {
+          #gallery > div .galleryContent div h2 {
+            font-size: 2.5rem; } }
+        @media (min-width: 1024px) {
+          #gallery > div .galleryContent div h2 {
+            font-size: 3.5rem; } }
       #gallery > div .galleryContent div a {
         color: white;
-        font-size: 1.5rem;
+        font-size: 0.75rem;
         background: #1fabdb;
         border-radius: 25px;
-        width: 200px;
-        height: 50px;
+        width: 100px;
+        height: 30px;
         margin-top: 10px;
-        padding: 15px 30px;
+        padding: 5px;
         align-self: center; }
+        @media (min-width: 765px) {
+          #gallery > div .galleryContent div a {
+            font-size: 1rem;
+            width: 150px;
+            height: 40px;
+            margin-top: 10px;
+            padding: 15px 30px; } }
+        @media (min-width: 1024px) {
+          #gallery > div .galleryContent div a {
+            font-size: 1.5rem;
+            width: 200px;
+            height: 50px;
+            margin-top: 10px;
+            padding: 15px 30px; } }
 
 #alphabet {
   min-height: 1000px; }
@@ -398,14 +439,32 @@ header > div {
       border-bottom: 10px solid #1fabdb;
       text-align: center;
       position: relative;
-      height: 150px; }
+      height: 100px; }
+      @media (min-width: 765px) {
+        #alphabet header .title {
+          height: 150px; } }
+      @media (min-width: 1024px) {
+        #alphabet header .title {
+          height: 150px; } }
       #alphabet header .title h1 {
-        font-size: 3rem;
+        font-size: 1.5rem;
         font-weight: bold;
         text-decoration: underline;
         padding: 15px; }
+        @media (min-width: 765px) {
+          #alphabet header .title h1 {
+            font-size: 3rem; } }
+        @media (min-width: 1024px) {
+          #alphabet header .title h1 {
+            font-size: 3rem; } }
       #alphabet header .title h2 {
-        font-size: 2rem; }
+        font-size: 1rem; }
+        @media (min-width: 765px) {
+          #alphabet header .title h2 {
+            font-size: 2rem; } }
+        @media (min-width: 1024px) {
+          #alphabet header .title h2 {
+            font-size: 2rem; } }
       #alphabet header .title div {
         position: absolute;
         top: 10px;
@@ -471,12 +530,22 @@ header > div {
   position: relative; }
   .racesBox button {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
+    top: 10px;
+    right: 10px;
+    font-size: 0.75rem;
     color: white;
     font-weight: bold;
     background-color: #575657; }
+    @media (min-width: 765px) {
+      .racesBox button {
+        font-size: 1.5rem;
+        top: 20px;
+        right: 20px; } }
+    @media (min-width: 1024px) {
+      .racesBox button {
+        font-size: 1.5rem;
+        top: 20px;
+        right: 20px; } }
   .racesBox .racesImage {
     display: inline-block;
     width: 100%; }
@@ -498,36 +567,64 @@ header > div {
       .racesBox .racesInfo {
         width: 50%; } }
     .racesBox .racesInfo h3 {
-      padding-bottom: 20px;
-      font-size: 2rem;
+      font-size: 1.25rem;
       text-decoration: underline;
       color: #1fabdb;
       font-weight: bold; }
+      @media (min-width: 765px) {
+        .racesBox .racesInfo h3 {
+          font-size: 2rem;
+          padding: 10px 0; } }
+      @media (min-width: 1024px) {
+        .racesBox .racesInfo h3 {
+          font-size: 2.5rem;
+          padding: 30px 0; } }
     .racesBox .racesInfo .infoTitle {
       font-weight: bold;
-      font-size: 1.25rem; }
+      font-size: 0.65rem; }
+      @media (min-width: 765px) {
+        .racesBox .racesInfo .infoTitle {
+          font-size: 1.25rem; } }
+      @media (min-width: 1024px) {
+        .racesBox .racesInfo .infoTitle {
+          font-size: 1.75rem; } }
     .racesBox .racesInfo span.info {
-      margin-bottom: 5px; }
+      padding-bottom: 15px;
+      font-size: 0.65rem; }
+      @media (min-width: 765px) {
+        .racesBox .racesInfo span.info {
+          font-size: 1.25rem; } }
+      @media (min-width: 1024px) {
+        .racesBox .racesInfo span.info {
+          font-size: 1.75rem; } }
 
 .fullScreen {
   margin: auto auto;
   position: fixed;
   display: inline-block;
   width: 80vw;
-  height: 80vh;
+  height: 90vh;
   left: 10vw;
-  top: 10vh;
+  top: 5vh;
   z-index: 50; }
   @media (min-width: 765px) {
     .fullScreen {
       display: flex;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      width: 80vw;
+      height: 80vh;
+      left: 10vw;
+      top: 10vh; } }
   @media (min-width: 1024px) {
     .fullScreen {
       display: flex;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      width: 80vw;
+      height: 80vh;
+      left: 10vw;
+      top: 10vh; } }
 
 @keyframes spaceboots {
   0% {

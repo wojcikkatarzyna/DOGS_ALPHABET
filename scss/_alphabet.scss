@@ -12,15 +12,33 @@
             border-bottom: 10px solid $baseColor1;
             text-align: center;
             position: relative;
-            height: 150px;
+            height: 100px;
+            @include tablet{
+              height: 150px;
+            }
+            @include desktop{
+              height: 150px;
+            }
             h1{
-                font-size: 3rem;
+                font-size: 1.5rem;
                 font-weight: bold;
                 text-decoration: underline;
                 padding: 15px;
+                @include tablet{
+                  font-size: 3rem;
+                }
+                @include desktop{
+                  font-size: 3rem;
+                }
             }
             h2{
-                font-size: 2rem;
+                font-size: 1rem;
+                @include tablet{
+                  font-size: 2rem;
+                }
+                @include desktop{
+                  font-size: 2rem;
+                }
             }
             div{
                 position: absolute;
