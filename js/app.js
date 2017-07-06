@@ -397,4 +397,22 @@ $(document).ready(function(){
                 }
                 galleryContent.eq(slide).css('z-index', '5');
               });
+
+              //SIZE OF ICONS:
+
+
+              var mobile = window.matchMedia('(min-width: 765px)');
+              mobile.addListener(function(m){
+                  if(m.matches){
+                      arrow.addClass('fa-2x');
+                  }
+              })
+
+              var mobile = window.matchMedia('(min-width: 1024px)');
+              mobile.addListener(function(m){
+                  if(m.matches){
+                      arrow.addClass('fa-3x');
+                  }
+              })
+
 })
