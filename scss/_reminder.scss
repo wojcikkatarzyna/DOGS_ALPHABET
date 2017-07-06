@@ -1,0 +1,61 @@
+#reminder{
+    div{
+      height: 100px;
+      width: 200px;
+      z-index: 100;
+      border: 3px solid red;
+      background: white;
+      font-weight: bold;
+      margin: auto;
+      padding: 20px 0;
+      text-align: center;
+      position: absolute;
+      top: -200px;
+      left: calc(50% - 100px);
+      @include tablet{
+        left: calc(50% - 200px);
+        height: 200px;
+        width: 400px;
+        padding: 50px;
+        border: 5px solid red;
+      }
+      @include desktop{
+        left: calc(50% - 300px);
+        height: 200px;
+        width: 600px;
+        padding: 50px 100px;
+        border: 5px solid red;
+      }
+      h1{
+          color: red;
+          font-size: 1rem;
+          @include tablet{
+            font-size: 2rem;
+          }
+          @include desktop{
+            font-size: 2rem;
+          }
+      }
+      h2{
+          font-size: 0.75rem;
+          @include tablet{
+            font-size: 1rem;
+          }
+          @include desktop{
+            font-size: 1.25rem;
+          }
+      }
+      &.quizReminder{
+          animation-name: reminder;
+          animation-duration: 15s;
+          animation-iteration-count: 1;
+          animation-delay: 5s;
+      }
+      &.shelterReminder{
+          animation-name: reminder;
+          animation-duration: 15s;
+          animation-iteration-count: 1;
+          animation-delay: 10s;
+      }
+    }
+}

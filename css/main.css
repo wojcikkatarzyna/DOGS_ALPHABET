@@ -278,14 +278,24 @@ header > div {
       header > div .name .title {
         font-size: 5rem;
         height: 125px;
-        line-height: 150px; } }
+        line-height: 150px;
+        letter-spacing: 10px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 5s steps(15, end); } }
   header > div .name .description {
     display: none; }
     @media (min-width: 1024px) {
       header > div .name .description {
         display: block;
         height: 75px;
-        font-size: 2rem; } }
+        font-size: 2rem;
+        color: transparent;
+        animation-name: visible;
+        animation-duration: 3s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards; } }
   header > div nav {
     text-align: center;
     text-align: right; }
@@ -325,7 +335,10 @@ header > div {
           header > div nav ul li {
             width: 33.333%;
             line-height: 65px;
-            min-height: 65px; } }
+            min-height: 65px; }
+            header > div nav ul li:nth-of-type(2) {
+              border-left: 5px solid #aca6a6;
+              border-right: 5px solid #aca6a6; } }
 
 .showMenu {
   display: block; }
@@ -656,6 +669,18 @@ header > div {
     transform: translate(2px, 2px) rotate(0deg); }
   100% {
     transform: translate(1px, -2px) rotate(-1deg); } }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes visible {
+  from {
+    color: transparent; }
+  to {
+    color: white; } }
 
 #matchBreed header {
   background: #575657;
