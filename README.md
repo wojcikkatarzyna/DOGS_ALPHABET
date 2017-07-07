@@ -33,3 +33,6 @@ List below contains all data sources used in this project:
   T - http://static8.depositphotos.com,
   W - http://dogtime.com,
   Y - http://dinoanimals.pl.
+
+
+  Link to web site: https://wojcikkatarzyna.github.io/DOGS_ALPHABET/html/
