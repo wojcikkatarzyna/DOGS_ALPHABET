@@ -10,6 +10,7 @@ List below contains all data sources used in this project:
 
 - svg map of Poland : http://Simplemaps.com,
 - maps of provinces: created in Quantum GIS with data from http://www.codgik.gov.pl,
+- sounds effects: https://github.com/MahdiF/loud-links,
 - all big pictures of dogs: http://dogtime.com,
 - small pictures of dogs:
   A - http://www.tierfreund.de,
