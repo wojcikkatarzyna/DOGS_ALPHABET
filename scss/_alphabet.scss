@@ -1,12 +1,16 @@
 
 #alphabet{
-  min-height: 1000px;
+
+  background-image: url("http://lovelygarden.pl/wp-content/uploads/2015/10/01-43890193_xxl-1350-px-1140x760.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   @include desktop{
       min-height: 750px;
   }
     header{
-        background: $baseColor3;
-        color: white;
+        color: $baseColor1;
+        background: rgba(255,255,255, 0.25);
         .title{
             border-top: 5px solid $baseColor1;
             border-bottom: 5px solid $baseColor1;
@@ -52,17 +56,11 @@
         }
     }
     .breeds{
+        min-height: 1000px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
-        background: rgba(226,226,226,1);
-        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(0%, rgba(87,86,87,1)), color-stop(95%, rgba(219,219,219,1)), color-stop(100%, rgba(254,254,254,1)));
-        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-
         .box{
             width: 30vw;
             height: 30vw;

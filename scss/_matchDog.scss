@@ -1,10 +1,9 @@
-#matchBreed{
+#matchBreed, #findDog{
   header{
-      background: $baseColor3;
-      color: white;
+      color: $baseColor1;
+      background: rgba(255,255,255, 0.25);
       .title{
           border-top: 5px solid $baseColor1;
-          border-bottom: 5px solid $baseColor1;
           text-align: center;
           position: relative;
           height: 100px;
@@ -43,71 +42,85 @@
               position: absolute;
               top: 10px;
               right: 20px;
+              font-size: 1.5rem;
+              @include tablet{
+                font-size: 2rem;
+              }
+              @include desktop{
+                font-size: 3rem;
+              }
           }
       }
   }
 }
 
-  #matchDog{
-    .quiz{
-        padding: 25px;
-        background: rgba(226,226,226,1);
-        background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(0%, rgba(87,86,87,1)), color-stop(95%, rgba(219,219,219,1)), color-stop(100%, rgba(254,254,254,1)));
-        background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(87,86,87,1) 0%, rgba(219,219,219,1) 95%, rgba(254,254,254,1) 100%);
-        hr{
-          border-top: 5px double $baseColor1;
-        }
-        h3{
-          color: $baseColor1;
-          font-weight: bold;
-          font-size: 1rem;
-          @include tablet{
-            font-size: 2rem;
+#matchBreed{
+    background-image: url("https://d-pt.ppstatic.pl/k/r/1/fa/63/56979c319c9d0_p.jpg?1452796662");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    #matchDog{
+      background-image: url("https://d-pt.ppstatic.pl/k/r/1/fa/63/56979c319c9d0_p.jpg?1452796662");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      .quiz{
+          padding: 25px;
+          background: rgba(255,255,255, 0.25);
+          hr{
+            border-top: 5px double $baseColor1;
           }
-        }
-        form{
-            input[type='radio']{
-                @include tablet{
-                  transform: scale(1.5);
-                }
-                @include desktop{
-                  transform: scale(1.5);
-                }
+          h3{
+            color: $baseColor1;
+            font-weight: bold;
+            font-size: 1rem;
+            @include tablet{
+              font-size: 2rem;
             }
-            input[type=submit]{
-                background-color: $baseColor1;
-                color: white;
-                font-weight: bold;
-                padding: 10px;
-                width: 100%;
-                text-align: center;
-                font-size: 1.5rem;
-                @include tablet{
-                  font-size: 2rem;
-                }
-                @include desktop{
-                  font-size: 2.5rem;
-                }
-            }
-            label{
-                font-size: 1rem;
-                line-height: 1rem;
-                padding-left: 10px;
-                @include tablet{
+          }
+          form{
+              input[type='radio']{
+                  @include tablet{
+                    transform: scale(1.5);
+                  }
+                  @include desktop{
+                    transform: scale(1.5);
+                  }
+              }
+              input[type=submit]{
+                  font-family: 'Amatic SC', cursive;
+                  background-color: $baseColor1;
+                  color: white;
+                  font-weight: bold;
+                  padding: 10px;
+                  width: 100%;
+                  text-align: center;
                   font-size: 1.5rem;
-                  line-height: 2rem;
-                }
-                @include desktop{
-                  font-size: 2rem;
-                  line-height: 2.5rem;
-                }
-            }
-        }
+                  @include tablet{
+                    font-size: 2rem;
+                  }
+                  @include desktop{
+                    font-size: 2.5rem;
+                  }
+              }
+              label{
+                  font-size: 1rem;
+                  line-height: 1rem;
+                  padding-left: 10px;
+                  @include tablet{
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                  }
+                  @include desktop{
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                  }
+              }
+          }
+      }
     }
-  }
+}
+
 
 .quizResult{
     div{

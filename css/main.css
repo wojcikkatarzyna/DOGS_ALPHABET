@@ -245,35 +245,37 @@ input[type=button] {
       width: 100%; } }
 
 body {
-  font-size: 20px; }
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive; }
 
-header {
+body > header:first-of-type {
   background-image: url("http://bi.gazeta.pl/im/56/33/10/z16987478Q,Psy-w-obiektywie-Alicji-Zmyslowskiej.jpg");
   background-size: cover;
   font-weight: bold;
   text-align: center;
   color: #0c1887; }
   @media (min-width: 1024px) {
-    header {
+    body > header:first-of-type {
       background-position: 0 -115px; } }
-  header > div:first-of-type .name {
+  body > header:first-of-type > div:first-of-type .name {
     min-height: 40px; }
     @media (min-width: 765px) {
-      header > div:first-of-type .name {
+      body > header:first-of-type > div:first-of-type .name {
         min-height: 75px; } }
     @media (min-width: 1024px) {
-      header > div:first-of-type .name {
-        min-height: 200px; } }
-    header > div:first-of-type .name .title {
+      body > header:first-of-type > div:first-of-type .name {
+        min-height: 200px;
+        background: rgba(255, 255, 255, 0.25); } }
+    body > header:first-of-type > div:first-of-type .name .title {
       font-size: 1.25rem;
       padding-left: 15px;
       line-height: 40px; }
       @media (min-width: 765px) {
-        header > div:first-of-type .name .title {
+        body > header:first-of-type > div:first-of-type .name .title {
           font-size: 2.5rem;
           line-height: 75px; } }
       @media (min-width: 1024px) {
-        header > div:first-of-type .name .title {
+        body > header:first-of-type > div:first-of-type .name .title {
           font-size: 5rem;
           height: 125px;
           line-height: 150px;
@@ -282,10 +284,10 @@ header {
           white-space: nowrap;
           overflow: hidden;
           animation: typing 2s steps(15, end); } }
-    header > div:first-of-type .name .description {
+    body > header:first-of-type > div:first-of-type .name .description {
       display: none; }
       @media (min-width: 1024px) {
-        header > div:first-of-type .name .description {
+        body > header:first-of-type > div:first-of-type .name .description {
           display: block;
           height: 75px;
           font-size: 2rem;
@@ -294,156 +296,154 @@ header {
           animation-duration: 2s;
           animation-delay: 3s;
           animation-fill-mode: forwards; } }
-  header > div:first-of-type .mobileMenu {
+  body > header:first-of-type > div:first-of-type .mobileMenu {
     display: flex;
     justify-content: center; }
-    header > div:first-of-type .mobileMenu a {
+    body > header:first-of-type > div:first-of-type .mobileMenu a {
       font-size: 1rem;
       line-height: 40px;
       color: #0c1887; }
       @media (min-width: 765px) {
-        header > div:first-of-type .mobileMenu a {
+        body > header:first-of-type > div:first-of-type .mobileMenu a {
           line-height: 75px;
-          font-size: 1.5rem; } }
+          font-size: 2rem; } }
       @media (min-width: 1024px) {
-        header > div:first-of-type .mobileMenu a {
+        body > header:first-of-type > div:first-of-type .mobileMenu a {
           display: none; } }
-  header > div:nth-of-type(2) nav {
+  body > header:first-of-type > div:nth-of-type(2) nav {
     display: none; }
     @media (min-width: 1024px) {
-      header > div:nth-of-type(2) nav {
+      body > header:first-of-type > div:nth-of-type(2) nav {
         display: block !important; } }
-    header > div:nth-of-type(2) nav ul li {
+    body > header:first-of-type > div:nth-of-type(2) nav ul li {
       font-size: 1rem;
       text-decoration: none;
       list-style: none;
       line-height: 40px;
       height: 40px;
       border: transparent;
-      border-top: 5px solid rgba(255, 255, 255, 0.25); }
-      header > div:nth-of-type(2) nav ul li a {
+      border-top: 5px solid rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.25); }
+      body > header:first-of-type > div:nth-of-type(2) nav ul li a {
         text-decoration: none;
-        background: rgba(255, 255, 255, 0.25);
         color: #0c1887; }
       @media (min-width: 765px) {
-        header > div:nth-of-type(2) nav ul li {
+        body > header:first-of-type > div:nth-of-type(2) nav ul li {
           font-size: 1.5rem;
           line-height: 65px;
           min-height: 65px; } }
       @media (min-width: 1024px) {
-        header > div:nth-of-type(2) nav ul li {
+        body > header:first-of-type > div:nth-of-type(2) nav ul li {
           display: inline-block;
           width: 33.333%;
           line-height: 65px;
           min-height: 65px; }
-          header > div:nth-of-type(2) nav ul li:nth-of-type(2) {
+          body > header:first-of-type > div:nth-of-type(2) nav ul li:nth-of-type(2) {
             border-left: 5px solid rgba(255, 255, 255, 0.25);
             border-right: 5px solid rgba(255, 255, 255, 0.25); } }
 
 #gallery > div {
-  background: #e2e2e2;
-  background: -moz-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(0%, #575657), color-stop(95%, #dbdbdb), color-stop(100%, #fefefe));
-  background: -webkit-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-  background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-  background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
+  border-top: 5px solid #0c1887; }
+  @media (min-width: 765px) {
+    #gallery > div {
+      border-top: 10px solid #0c1887; } }
+  @media (min-width: 1024px) {
+    #gallery > div {
+      border-top: 10px solid #0c1887; } }
   #gallery > div .prev, #gallery > div .next {
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center; }
     @media (min-width: 765px) {
       #gallery > div .prev, #gallery > div .next {
-        height: 200px; } }
+        height: 175px; } }
     @media (min-width: 1024px) {
       #gallery > div .prev, #gallery > div .next {
-        height: 250px; } }
-    #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
-      width: 25px;
-      height: 25px;
-      border: 5px solid #0c1887;
-      transform: rotate(45deg);
-      line-height: 200px; }
-      @media (min-width: 765px) {
-        #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
-          width: 50px;
-          height: 50px; } }
-      @media (min-width: 1024px) {
-        #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
-          width: 50px;
-          height: 50px; } }
-    #gallery > div .prev .arrowLeft, #gallery > div .next .arrowLeft {
-      border-top: transparent;
-      border-right: transparent; }
-    #gallery > div .prev .arrowRigth, #gallery > div .next .arrowRigth {
-      border-bottom: transparent;
-      border-left: transparent; }
-  #gallery > div .galleryContent {
-    height: 150px;
-    position: relative; }
+        height: 225px; } }
+  #gallery > div .arrowLeft, #gallery > div .arrowRigth {
+    width: 25px;
+    height: 25px;
+    border: 5px solid #0c1887;
+    transform: rotate(45deg);
+    line-height: 100px; }
     @media (min-width: 765px) {
-      #gallery > div .galleryContent {
-        height: 200px; } }
+      #gallery > div .arrowLeft, #gallery > div .arrowRigth {
+        line-height: 175px;
+        width: 50px;
+        height: 50px; } }
     @media (min-width: 1024px) {
-      #gallery > div .galleryContent {
-        height: 250px; } }
-    #gallery > div .galleryContent div {
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      position: absolute;
-      padding: 20px 0;
-      top: 0;
-      display: flex;
-      flex-direction: column;
-      background: #e2e2e2;
-      background: -moz-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(0%, #575657), color-stop(95%, #dbdbdb), color-stop(100%, #fefefe));
-      background: -webkit-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-      background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-      background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
-      #gallery > div .galleryContent div h2 {
-        font-size: 1.5rem;
-        font-weight: bold; }
-        @media (min-width: 765px) {
-          #gallery > div .galleryContent div h2 {
-            font-size: 2.5rem; } }
-        @media (min-width: 1024px) {
-          #gallery > div .galleryContent div h2 {
-            font-size: 3.5rem; } }
-      #gallery > div .galleryContent div a {
-        color: white;
-        font-size: 0.75rem;
-        background: #0c1887;
-        border-radius: 25px;
-        width: 100px;
-        height: 30px;
-        margin-top: 10px;
-        padding: 5px;
-        align-self: center; }
-        @media (min-width: 765px) {
-          #gallery > div .galleryContent div a {
-            font-size: 1rem;
-            width: 150px;
-            height: 40px;
-            margin-top: 10px;
-            padding: 15px 30px; } }
-        @media (min-width: 1024px) {
-          #gallery > div .galleryContent div a {
-            font-size: 1.5rem;
-            width: 200px;
-            height: 50px;
-            margin-top: 10px;
-            padding: 15px 30px; } }
+      #gallery > div .arrowLeft, #gallery > div .arrowRigth {
+        line-height: 225px;
+        width: 50px;
+        height: 50px; } }
+  #gallery > div .arrowLeft {
+    border-top: transparent;
+    border-right: transparent; }
+  #gallery > div .arrowRigth {
+    border-bottom: transparent;
+    border-left: transparent; }
+
+#gallery .galleryContent {
+  height: 100px; }
+  @media (min-width: 765px) {
+    #gallery .galleryContent {
+      height: 175px; } }
+  @media (min-width: 1024px) {
+    #gallery .galleryContent {
+      height: 225px; } }
+  #gallery .galleryContent div {
+    height: 100%;
+    width: 100%;
+    text-align: center; }
+    #gallery .galleryContent div h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 2rem; }
+      @media (min-width: 765px) {
+        #gallery .galleryContent div h2 {
+          font-size: 2.5rem;
+          line-height: 4rem; } }
+      @media (min-width: 1024px) {
+        #gallery .galleryContent div h2 {
+          font-size: 3.5rem;
+          line-height: 5rem; } }
+    #gallery .galleryContent div a {
+      color: white;
+      font-size: 0.75rem;
+      background: #0c1887;
+      border-radius: 25px;
+      width: 100px;
+      height: 30px;
+      padding: 5px;
+      align-self: center; }
+      @media (min-width: 765px) {
+        #gallery .galleryContent div a {
+          font-size: 1rem;
+          width: 150px;
+          height: 40px;
+          padding: 10px 30px; } }
+      @media (min-width: 1024px) {
+        #gallery .galleryContent div a {
+          font-size: 1.5rem;
+          width: 200px;
+          height: 50px;
+          padding: 10px 30px; } }
+
+.hideSlide {
+  display: none; }
 
 #alphabet {
-  min-height: 1000px; }
+  background-image: url("http://lovelygarden.pl/wp-content/uploads/2015/10/01-43890193_xxl-1350-px-1140x760.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
   @media (min-width: 1024px) {
     #alphabet {
       min-height: 750px; } }
   #alphabet header {
-    background: #575657;
-    color: white; }
+    color: #0c1887;
+    background: rgba(255, 255, 255, 0.25); }
     #alphabet header .title {
       border-top: 5px solid #0c1887;
       border-bottom: 5px solid #0c1887;
@@ -484,16 +484,11 @@ header {
         top: 10px;
         right: 20px; }
   #alphabet .breeds {
+    min-height: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: space-around;
-    background: #e2e2e2;
-    background: -moz-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(0%, #575657), color-stop(95%, #dbdbdb), color-stop(100%, #fefefe));
-    background: -webkit-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-    background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-    background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
+    align-content: space-around; }
     #alphabet .breeds .box {
       width: 30vw;
       height: 30vw;
@@ -676,98 +671,110 @@ header {
   to {
     color: #0c1887; } }
 
-#matchBreed header {
-  background: #575657;
-  color: white; }
-  #matchBreed header .title {
+#matchBreed header, #findDog header {
+  color: #0c1887;
+  background: rgba(255, 255, 255, 0.25); }
+  #matchBreed header .title, #findDog header .title {
     border-top: 5px solid #0c1887;
-    border-bottom: 5px solid #0c1887;
     text-align: center;
     position: relative;
     height: 100px; }
     @media (min-width: 765px) {
-      #matchBreed header .title {
+      #matchBreed header .title, #findDog header .title {
         height: 150px;
         border-top: 10px solid #0c1887;
         border-bottom: 10px solid #0c1887; } }
     @media (min-width: 1024px) {
-      #matchBreed header .title {
+      #matchBreed header .title, #findDog header .title {
         height: 150px;
         border-top: 10px solid #0c1887;
         border-bottom: 10px solid #0c1887; } }
-    #matchBreed header .title h1 {
+    #matchBreed header .title h1, #findDog header .title h1 {
       font-size: 1.5rem;
       font-weight: bold;
       text-decoration: underline;
       padding: 15px; }
       @media (min-width: 765px) {
-        #matchBreed header .title h1 {
+        #matchBreed header .title h1, #findDog header .title h1 {
           font-size: 3rem; } }
       @media (min-width: 1024px) {
-        #matchBreed header .title h1 {
+        #matchBreed header .title h1, #findDog header .title h1 {
           font-size: 3rem; } }
-    #matchBreed header .title h2 {
+    #matchBreed header .title h2, #findDog header .title h2 {
       font-size: 1rem; }
       @media (min-width: 765px) {
-        #matchBreed header .title h2 {
+        #matchBreed header .title h2, #findDog header .title h2 {
           font-size: 2rem; } }
       @media (min-width: 1024px) {
-        #matchBreed header .title h2 {
+        #matchBreed header .title h2, #findDog header .title h2 {
           font-size: 2rem; } }
-    #matchBreed header .title div {
+    #matchBreed header .title div, #findDog header .title div {
       position: absolute;
       top: 10px;
-      right: 20px; }
+      right: 20px;
+      font-size: 1.5rem; }
+      @media (min-width: 765px) {
+        #matchBreed header .title div, #findDog header .title div {
+          font-size: 2rem; } }
+      @media (min-width: 1024px) {
+        #matchBreed header .title div, #findDog header .title div {
+          font-size: 3rem; } }
 
-#matchDog .quiz {
-  padding: 25px;
-  background: #e2e2e2;
-  background: -moz-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(0%, #575657), color-stop(95%, #dbdbdb), color-stop(100%, #fefefe));
-  background: -webkit-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-  background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
-  background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
-  #matchDog .quiz hr {
-    border-top: 5px double #0c1887; }
-  #matchDog .quiz h3 {
-    color: #0c1887;
-    font-weight: bold;
-    font-size: 1rem; }
-    @media (min-width: 765px) {
-      #matchDog .quiz h3 {
-        font-size: 2rem; } }
-  @media (min-width: 765px) {
-    #matchDog .quiz form input[type='radio'] {
-      transform: scale(1.5); } }
-  @media (min-width: 1024px) {
-    #matchDog .quiz form input[type='radio'] {
-      transform: scale(1.5); } }
-  #matchDog .quiz form input[type=submit] {
-    background-color: #0c1887;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem; }
-    @media (min-width: 765px) {
-      #matchDog .quiz form input[type=submit] {
-        font-size: 2rem; } }
-    @media (min-width: 1024px) {
-      #matchDog .quiz form input[type=submit] {
-        font-size: 2.5rem; } }
-  #matchDog .quiz form label {
-    font-size: 1rem;
-    line-height: 1rem;
-    padding-left: 10px; }
-    @media (min-width: 765px) {
-      #matchDog .quiz form label {
-        font-size: 1.5rem;
-        line-height: 2rem; } }
-    @media (min-width: 1024px) {
-      #matchDog .quiz form label {
-        font-size: 2rem;
-        line-height: 2.5rem; } }
+#matchBreed {
+  background-image: url("https://d-pt.ppstatic.pl/k/r/1/fa/63/56979c319c9d0_p.jpg?1452796662");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top; }
+  #matchBreed #matchDog {
+    background-image: url("https://d-pt.ppstatic.pl/k/r/1/fa/63/56979c319c9d0_p.jpg?1452796662");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    #matchBreed #matchDog .quiz {
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.25); }
+      #matchBreed #matchDog .quiz hr {
+        border-top: 5px double #0c1887; }
+      #matchBreed #matchDog .quiz h3 {
+        color: #0c1887;
+        font-weight: bold;
+        font-size: 1rem; }
+        @media (min-width: 765px) {
+          #matchBreed #matchDog .quiz h3 {
+            font-size: 2rem; } }
+      @media (min-width: 765px) {
+        #matchBreed #matchDog .quiz form input[type='radio'] {
+          transform: scale(1.5); } }
+      @media (min-width: 1024px) {
+        #matchBreed #matchDog .quiz form input[type='radio'] {
+          transform: scale(1.5); } }
+      #matchBreed #matchDog .quiz form input[type=submit] {
+        font-family: 'Amatic SC', cursive;
+        background-color: #0c1887;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem; }
+        @media (min-width: 765px) {
+          #matchBreed #matchDog .quiz form input[type=submit] {
+            font-size: 2rem; } }
+        @media (min-width: 1024px) {
+          #matchBreed #matchDog .quiz form input[type=submit] {
+            font-size: 2.5rem; } }
+      #matchBreed #matchDog .quiz form label {
+        font-size: 1rem;
+        line-height: 1rem;
+        padding-left: 10px; }
+        @media (min-width: 765px) {
+          #matchBreed #matchDog .quiz form label {
+            font-size: 1.5rem;
+            line-height: 2rem; } }
+        @media (min-width: 1024px) {
+          #matchBreed #matchDog .quiz form label {
+            font-size: 2rem;
+            line-height: 2.5rem; } }
 
 .quizResult div {
   width: 100%;
@@ -794,69 +801,77 @@ header {
       width: 30%; } }
 
 #findDog {
-  padding: 25px;
-  justify-content: center; }
-  #findDog svg {
-    width: 100%;
-    height: 320px; }
-    @media (min-width: 765px) {
-      #findDog svg {
-        height: 100%; } }
-    @media (min-width: 1024px) {
-      #findDog svg {
-        height: 100%; } }
-  #findDog select {
-    border: 3px solid #0c1887;
-    font-size: 1rem;
-    width: 100%;
-    margin-bottom: 25px; }
-  #findDog div.info {
-    width: 100%;
-    font-size: 0.75rem;
-    text-align: center; }
-    @media (min-width: 765px) {
-      #findDog div.info {
-        font-size: 1.5rem; } }
-  #findDog div.shelterList {
-    width: 100%;
-    font-size: 1rem; }
-    #findDog div.shelterList img {
-      width: 100%; }
+  background-image: url("https://k60.kn3.net/taringa/1/A/6/1/C/D/HernanBSAS/303.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #findDog > div {
+    padding: 25px;
+    justify-content: center; }
+    #findDog > div svg {
+      width: 100%;
+      height: 320px; }
+      @media (min-width: 765px) {
+        #findDog > div svg {
+          height: 100%; } }
       @media (min-width: 1024px) {
-        #findDog div.shelterList img {
-          width: 70%;
-          display: inline-block; } }
-    @media (min-width: 1024px) {
-      #findDog div.shelterList ul {
-        width: 30%;
-        height: 100%;
-        display: inline-block; } }
-    #findDog div.shelterList ul li h3 {
+        #findDog > div svg {
+          height: 100%; } }
+    #findDog > div select {
+      border: 3px solid #0c1887;
       font-size: 1rem;
-      font-weight: bold;
-      color: #0c1887; }
+      width: 100%;
+      margin-bottom: 25px; }
+    #findDog > div div.info {
+      width: 100%;
+      font-size: 0.75rem;
+      text-align: center; }
       @media (min-width: 765px) {
-        #findDog div.shelterList ul li h3 {
+        #findDog > div div.info {
           font-size: 1.5rem; } }
+    #findDog > div div.shelterList {
+      width: 100%;
+      font-size: 1rem; }
+      #findDog > div div.shelterList img {
+        width: 100%; }
+        @media (min-width: 1024px) {
+          #findDog > div div.shelterList img {
+            width: 50%;
+            display: inline-block; } }
       @media (min-width: 1024px) {
-        #findDog div.shelterList ul li h3 {
-          font-size: 1.5rem; } }
-    #findDog div.shelterList ul li hr {
-      border-top: 5px double #575657; }
-    #findDog div.shelterList ul li p {
-      font-size: 0.75rem; }
-      @media (min-width: 765px) {
-        #findDog div.shelterList ul li p {
-          font-size: 1rem; } }
-      @media (min-width: 1024px) {
-        #findDog div.shelterList ul li p {
-          font-size: 1rem; } }
+        #findDog > div div.shelterList ul {
+          width: 50%;
+          height: 100%;
+          line-height: 100%;
+          display: inline-block; } }
+      #findDog > div div.shelterList ul li {
+        background: rgba(255, 255, 255, 0.25); }
+        #findDog > div div.shelterList ul li h3 {
+          font-size: 1rem;
+          font-weight: bold;
+          color: #0c1887; }
+          @media (min-width: 765px) {
+            #findDog > div div.shelterList ul li h3 {
+              font-size: 1.5rem; } }
+          @media (min-width: 1024px) {
+            #findDog > div div.shelterList ul li h3 {
+              font-size: 1.5rem; } }
+        #findDog > div div.shelterList ul li hr {
+          border-top: 5px double #575657; }
+        #findDog > div div.shelterList ul li p {
+          font-size: 0.75rem; }
+          @media (min-width: 765px) {
+            #findDog > div div.shelterList ul li p {
+              font-size: 1rem; } }
+          @media (min-width: 1024px) {
+            #findDog > div div.shelterList ul li p {
+              font-size: 1rem; } }
 
 .hideList {
   display: none; }
 
 footer {
-  background: #575657;
+  background: black;
   color: white;
   border-top: 5px solid #0c1887; }
   @media (min-width: 765px) {
@@ -883,3 +898,6 @@ footer {
 
 .hide {
   display: none; }
+
+* {
+  font-weight: bold; }

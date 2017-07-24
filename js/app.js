@@ -30,6 +30,7 @@ $(document).ready(function(){
       const arrow = $('.arrow');
 
       arrow.on('click', function(e){
+        console.log(arrow);
         e.preventDefault();
         const sectionToHide = $(this).parent().parent().next();
         $(this).toggleClass('fa-caret-square-o-down');
@@ -371,26 +372,36 @@ $(document).ready(function(){
               const next = $('.next');
               const galleryContent = $('.galleryContent  div');
               let slide = 0;
-              galleryContent.eq(slide).css('z-index', '5');
 
-              next.on('click',function(e){
-                e.preventDefault();
-                galleryContent.eq(slide).css('z-index', '1');
-                slide++;
-                if (slide >galleryContent.length -1) {
-                  slide = 0;
-                }
-                galleryContent.eq(slide).css('z-index', '5');
-              });
+              prev.on('click', function(event){
+                  event.preventDefault();
+                  console.log('prev');
+                  galleryContent.eq(slide).addClass('hideSlide');
+                  slide++;
+                  if (slide >galleryContent.length -1) {
+                    slide = 0;
+                  };
+                  galleryContent.eq(slide).removeClass('hideSlide');
+              })
 
-              prev.on('click',function(){
-                galleryContent.eq(slide).css('z-index', '1');
+              function nextSlide() {
+                galleryContent.eq(slide).addClass('hideSlide');
                 slide--;
                 if (slide < 0) {
                   slide = galleryContent.length -1;
-                }
-                galleryContent.eq(slide).css('z-index', '5');
-              });
+                };
+                galleryContent.eq(slide).removeClass('hideSlide');
+              }
+
+              next.on('click', function(event){
+                  event.preventDefault();
+                  console.log('next');
+                  nextSlide();
+              })
+
+              const intervalId = setInterval(function(){
+                nextSlide();
+              }, 3000);
 
               //SIZE OF ICONS:
 

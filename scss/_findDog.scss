@@ -1,74 +1,84 @@
+
+
 #findDog{
-    padding: 25px;
-    justify-content: center;
-
-    svg{
-        width: 100%;
-        height: 320px;
-        @include tablet{
-          height: 100%;
-        }
-        @include desktop{
-          height: 100%;
-        }
-    }
-    select{
-        border: 3px solid $baseColor1;
-        font-size: 1rem;
-        width: 100%;
-        margin-bottom: 25px;
-    }
-    div.info{
-        width: 100%;
-        font-size: 0.75rem;
-        text-align: center;
-        @include tablet{
-          font-size: 1.5rem;
-        }
-    }
-    div.shelterList{
-        width: 100%;
-        font-size: 1rem;
-        img{
+    background-image: url("https://k60.kn3.net/taringa/1/A/6/1/C/D/HernanBSAS/303.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    >div{
+        padding: 25px;
+        justify-content: center;
+        svg{
             width: 100%;
-            @include desktop{
-              width: 70%;
-              display: inline-block;
-            }
-        }
-        ul{
-            @include desktop{
-              width: 30%;
+            height: 320px;
+            @include tablet{
               height: 100%;
-              display: inline-block;
             }
-            li{
-                h3{
-                    font-size: 1rem;
-                    font-weight: bold;
-                    color: $baseColor1;
-                    @include tablet{
-                      font-size: 1.5rem;
-                    }
-                    @include desktop{
-                      font-size: 1.5rem;
-                    }
-                }
-                hr{
-                  border-top: 5px double $baseColor3;
-                }
-                p{
-                    font-size: 0.75rem;
-                    @include tablet{
-                      font-size: 1rem;
-                    }
-                    @include desktop{
-                      font-size: 1rem;
-                    }
-                }
+            @include desktop{
+              height: 100%;
             }
-
         }
+        select{
+            border: 3px solid $baseColor1;
+            font-size: 1rem;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        div.info{
+            width: 100%;
+            font-size: 0.75rem;
+            text-align: center;
+            @include tablet{
+              font-size: 1.5rem;
+            }
+        }
+        div.shelterList{
+            width: 100%;
+            font-size: 1rem;
+
+            img{
+                width: 100%;
+                @include desktop{
+                  width: 50%;
+                  display: inline-block;
+                }
+            }
+            ul{
+                @include desktop{
+                  width: 50%;
+                  height: 100%;
+                  line-height: 100%;
+                  display: inline-block;
+                }
+                li{
+                    background: rgba(255,255,255, 0.25);
+                    h3{
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: $baseColor1;
+                        @include tablet{
+                          font-size: 1.5rem;
+                        }
+                        @include desktop{
+                          font-size: 1.5rem;
+                        }
+                    }
+                    hr{
+                      border-top: 5px double $baseColor3;
+                    }
+                    p{
+                        font-size: 0.75rem;
+                        @include tablet{
+                          font-size: 1rem;
+                        }
+                        @include desktop{
+                          font-size: 1rem;
+                        }
+                    }
+                }
+
+            }
+          }
     }
 }
 
