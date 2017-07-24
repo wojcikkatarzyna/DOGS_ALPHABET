@@ -19,7 +19,7 @@
           }
           h1{
               font-size: 1.5rem;
-              font-weight: bold;
+              font-weight: 700;
               text-decoration: underline;
               padding: 15px;
               @include tablet{
@@ -31,6 +31,7 @@
           }
           h2{
               font-size: 1rem;
+              font-weight: 700;
               @include tablet{
                 font-size: 2rem;
               }
@@ -72,7 +73,7 @@
           }
           h3{
             color: $baseColor1;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 1rem;
             @include tablet{
               font-size: 2rem;
@@ -91,11 +92,11 @@
                   font-family: 'Amatic SC', cursive;
                   background-color: $baseColor1;
                   color: white;
-                  font-weight: bold;
+                  font-weight: 700;
                   padding: 10px;
                   width: 100%;
                   text-align: center;
-                  font-size: 1.5rem;
+                  font-size: 1.25rem;
                   @include tablet{
                     font-size: 2rem;
                   }
@@ -125,10 +126,11 @@
 .quizResult{
     div{
       width: 100%;
-      font-size: 1rem;
-      font-weight: bold;
+      font-size: 1.25rem;
+      font-weight: 700;
       text-align: center;
       padding-bottom: 10px;
+      background: white;
       @include tablet{
         font-size: 2rem;
       }
@@ -137,6 +139,7 @@
       }
     }
     ul{
+        background: white;
         li{
             display: inline-block;
             text-align: center;

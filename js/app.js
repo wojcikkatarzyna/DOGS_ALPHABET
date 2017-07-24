@@ -9,8 +9,8 @@ $(document).ready(function(){
     const nav = $('nav');
 
     hamburger.on('click', function(e){
-      e.preventDefault();
-      nav.slideToggle();
+        e.preventDefault();
+        nav.slideToggle();
     });
 
     //SET BOX'S BACKGROUND IN ALPHABET SECTION:
@@ -25,17 +25,17 @@ $(document).ready(function(){
         });
     }
 
-      //drop sections
+      //HIDE AND SHOW SECTIONS
 
       const arrow = $('.arrow');
 
       arrow.on('click', function(e){
-        console.log(arrow);
-        e.preventDefault();
-        const sectionToHide = $(this).parent().parent().next();
-        $(this).toggleClass('fa-caret-square-o-down');
-        $(this).toggleClass('fa-caret-square-o-up');
-        sectionToHide.toggleClass('hide');
+          console.log(arrow);
+          e.preventDefault();
+          const sectionToHide = $(this).parent().parent().next();
+          $(this).toggleClass('fa-caret-square-o-down');
+          $(this).toggleClass('fa-caret-square-o-up');
+          sectionToHide.toggleClass('hide');
       })
 
       //CHOOSE PROVINCE FROM LIST:
@@ -44,31 +44,31 @@ $(document).ready(function(){
       const shelterList = $('.shelterList');
 
       function selectProvince(index){
-        //clean previous choice:
-        shelterList.empty();
-        //call a map of selected province and create new element - img:
-        let url = sheltersMaps[index].src;
-        let newImg = $('<img src="'+url+'">');
-        shelterList.append(newImg);
+            //clean previous choice:
+            shelterList.empty();
+            //call a map of selected province and create new element - img:
+            let url = sheltersMaps[index].src;
+            let newImg = $('<img src="'+url+'">');
+            shelterList.append(newImg);
 
-        //call a list of shelters for selected province and create new element - ul:
-        const newUl=$('<ul>');
-        let list = sheltersAddress[index].map((item) => {
-          let li=$('<li>');
-          let h3=$('<h3>').text(item.city);
-          let p=$('<p>').text(item.address);
-          let hr=$('<hr>');
-          li.append(h3);
-          li.append(p);
-          li.append(hr);
-          newUl.append(li);
-        })
-        shelterList.append(newUl);
+            //call a list of shelters for selected province and create new element - ul:
+            const newUl=$('<ul>');
+            let list = sheltersAddress[index].map((item) => {
+              let li=$('<li>');
+              let h3=$('<h3>').text(item.city);
+              let p=$('<p>').text(item.address);
+              let hr=$('<hr>');
+              li.append(h3);
+              li.append(p);
+              li.append(hr);
+              newUl.append(li);
+          })
+          shelterList.append(newUl);
       }
 
       select.on('change', function(e){
-        e.preventDefault();
-        selectProvince(this.selectedIndex);
+          e.preventDefault();
+          selectProvince(this.selectedIndex);
       })
 
       //CHOSE PROVINCE FROM MAP:
@@ -244,7 +244,6 @@ $(document).ready(function(){
           })
 
           //CLOSE button
-
               $('.racesBox').on('click','.close', function(e) {
                 e.preventDefault();
                 $(this).parent().removeClass('fullScreen');
@@ -399,53 +398,9 @@ $(document).ready(function(){
                   nextSlide();
               })
 
+              //SET INTERVAL TO CHANGE SLIDES AUTOMATICALLY
               const intervalId = setInterval(function(){
                 nextSlide();
               }, 3000);
-
-              //SIZE OF ICONS:
-
-              // var mobile = window.matchMedia('(max-width: 765px)');
-              // mobile.addListener(function(m){
-              //
-              //     if(m.matches && arrow.hasClass('fa-2x')){
-              //         arrow.removeClass('fa-2x');
-              //     } else if(m.matches && arrow.hasClass('fa-3x')){
-              //         arrow.removeClass('fa-3x');
-              //     }
-              //     if(m.matches && hamburger.hasClass('fa-2x')){
-              //         hamburger.removeClass('fa-2x');
-              //     } else if(m.matches && hamburger.hasClass('fa-3x')){
-              //         hamburger.removeClass('fa-2x');
-              //     }
-              // })
-              //
-              // var mobile = window.matchMedia('(min-width: 765px) and (max-width:1024px)');
-              // mobile.addListener(function(m){
-              //   console.log('matched');
-              //     if(m.matches){
-              //         arrow.addClass('fa-2x');
-              //         hamburger.addClass('fa-2x');
-              //     }
-              //     if(m.matches && arrow.hasClass('fa-3x')){
-              //         arrow.removeClass('fa-3x');
-              //     }
-              //     if(m.matches && hamburger.hasClass('fa-3x')){
-              //         hamburger.removeClass('fa-3x');
-              //     }
-              // })
-              //
-              // var mobile = window.matchMedia('(min-width: 1024px)');
-              // mobile.addListener(function(m){
-              //     if(m.matches){
-              //         arrow.addClass('fa-3x');
-              //     }
-              //     if(m.matches && arrow.hasClass('fa-2x')){
-              //         arrow.removeClass('fa-2x');
-              //     }
-              //     if(m.matches && hamburger.hasClass('fa-2x')){
-              //         hamburger.removeClass('fa-2x');
-              //     }
-              // })
 
 })

@@ -251,7 +251,7 @@ body {
 body > header:first-of-type {
   background-image: url("http://bi.gazeta.pl/im/56/33/10/z16987478Q,Psy-w-obiektywie-Alicji-Zmyslowskiej.jpg");
   background-size: cover;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   color: #0c1887; }
   @media (min-width: 1024px) {
@@ -267,6 +267,7 @@ body > header:first-of-type {
         min-height: 200px;
         background: rgba(255, 255, 255, 0.25); } }
     body > header:first-of-type > div:first-of-type .name .title {
+      font-weight: 700;
       font-size: 1.25rem;
       padding-left: 15px;
       line-height: 40px; }
@@ -291,6 +292,7 @@ body > header:first-of-type {
           display: block;
           height: 75px;
           font-size: 2rem;
+          font-weight: 700;
           color: transparent;
           animation-name: visible;
           animation-duration: 2s;
@@ -317,6 +319,7 @@ body > header:first-of-type {
         display: block !important; } }
     body > header:first-of-type > div:nth-of-type(2) nav ul li {
       font-size: 1rem;
+      font-weight: 700;
       text-decoration: none;
       list-style: none;
       line-height: 40px;
@@ -438,31 +441,25 @@ body > header:first-of-type {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
-  @media (min-width: 1024px) {
-    #alphabet {
-      min-height: 750px; } }
   #alphabet header {
     color: #0c1887;
     background: rgba(255, 255, 255, 0.25); }
     #alphabet header .title {
       border-top: 5px solid #0c1887;
-      border-bottom: 5px solid #0c1887;
       text-align: center;
       position: relative;
       height: 100px; }
       @media (min-width: 765px) {
         #alphabet header .title {
           height: 150px;
-          border-top: 10px solid #0c1887;
-          border-bottom: 10px solid #0c1887; } }
+          border-top: 10px solid #0c1887; } }
       @media (min-width: 1024px) {
         #alphabet header .title {
           height: 150px;
-          border-top: 10px solid #0c1887;
-          border-bottom: 10px solid #0c1887; } }
+          border-top: 10px solid #0c1887; } }
       #alphabet header .title h1 {
         font-size: 1.5rem;
-        font-weight: bold;
+        font-weight: 700;
         text-decoration: underline;
         padding: 15px; }
         @media (min-width: 765px) {
@@ -472,6 +469,7 @@ body > header:first-of-type {
           #alphabet header .title h1 {
             font-size: 3rem; } }
       #alphabet header .title h2 {
+        font-weight: 700;
         font-size: 1rem; }
         @media (min-width: 765px) {
           #alphabet header .title h2 {
@@ -482,13 +480,23 @@ body > header:first-of-type {
       #alphabet header .title div {
         position: absolute;
         top: 10px;
-        right: 20px; }
+        right: 20px;
+        font-size: 1.5rem; }
+        @media (min-width: 765px) {
+          #alphabet header .title div {
+            font-size: 2rem; } }
+        @media (min-width: 1024px) {
+          #alphabet header .title div {
+            font-size: 3rem; } }
   #alphabet .breeds {
     min-height: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around; }
+    @media (min-width: 1024px) {
+      #alphabet .breeds {
+        min-height: 750px; } }
     #alphabet .breeds .box {
       width: 30vw;
       height: 30vw;
@@ -691,7 +699,7 @@ body > header:first-of-type {
         border-bottom: 10px solid #0c1887; } }
     #matchBreed header .title h1, #findDog header .title h1 {
       font-size: 1.5rem;
-      font-weight: bold;
+      font-weight: 700;
       text-decoration: underline;
       padding: 15px; }
       @media (min-width: 765px) {
@@ -701,7 +709,8 @@ body > header:first-of-type {
         #matchBreed header .title h1, #findDog header .title h1 {
           font-size: 3rem; } }
     #matchBreed header .title h2, #findDog header .title h2 {
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-weight: 700; }
       @media (min-width: 765px) {
         #matchBreed header .title h2, #findDog header .title h2 {
           font-size: 2rem; } }
@@ -737,7 +746,7 @@ body > header:first-of-type {
         border-top: 5px double #0c1887; }
       #matchBreed #matchDog .quiz h3 {
         color: #0c1887;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 1rem; }
         @media (min-width: 765px) {
           #matchBreed #matchDog .quiz h3 {
@@ -752,11 +761,11 @@ body > header:first-of-type {
         font-family: 'Amatic SC', cursive;
         background-color: #0c1887;
         color: white;
-        font-weight: bold;
+        font-weight: 700;
         padding: 10px;
         width: 100%;
         text-align: center;
-        font-size: 1.5rem; }
+        font-size: 1.25rem; }
         @media (min-width: 765px) {
           #matchBreed #matchDog .quiz form input[type=submit] {
             font-size: 2rem; } }
@@ -778,10 +787,11 @@ body > header:first-of-type {
 
 .quizResult div {
   width: 100%;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 700;
   text-align: center;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  background: white; }
   @media (min-width: 765px) {
     .quizResult div {
       font-size: 2rem; } }
@@ -789,16 +799,18 @@ body > header:first-of-type {
     .quizResult div {
       font-size: 2rem; } }
 
-.quizResult ul li {
-  display: inline-block;
-  text-align: center;
-  width: 100%; }
-  @media (min-width: 765px) {
-    .quizResult ul li {
-      width: 40%; } }
-  @media (min-width: 1024px) {
-    .quizResult ul li {
-      width: 30%; } }
+.quizResult ul {
+  background: white; }
+  .quizResult ul li {
+    display: inline-block;
+    text-align: center;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .quizResult ul li {
+        width: 40%; } }
+    @media (min-width: 1024px) {
+      .quizResult ul li {
+        width: 30%; } }
 
 #findDog {
   background-image: url("https://k60.kn3.net/taringa/1/A/6/1/C/D/HernanBSAS/303.png");
@@ -821,11 +833,13 @@ body > header:first-of-type {
       border: 3px solid #0c1887;
       font-size: 1rem;
       width: 100%;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      font-family: 'Amatic SC', cursive; }
     #findDog > div div.info {
       width: 100%;
       font-size: 0.75rem;
-      text-align: center; }
+      text-align: center;
+      color: white; }
       @media (min-width: 765px) {
         #findDog > div div.info {
           font-size: 1.5rem; } }
@@ -845,10 +859,11 @@ body > header:first-of-type {
           line-height: 100%;
           display: inline-block; } }
       #findDog > div div.shelterList ul li {
-        background: rgba(255, 255, 255, 0.25); }
+        background: rgba(255, 255, 255, 0.25);
+        padding: 5px; }
         #findDog > div div.shelterList ul li h3 {
           font-size: 1rem;
-          font-weight: bold;
+          font-weight: 700;
           color: #0c1887; }
           @media (min-width: 765px) {
             #findDog > div div.shelterList ul li h3 {
@@ -898,6 +913,3 @@ footer {
 
 .hide {
   display: none; }
-
-* {
-  font-weight: bold; }

@@ -2,7 +2,7 @@ body{
     >header:first-of-type{
         background-image: url("http://bi.gazeta.pl/im/56/33/10/z16987478Q,Psy-w-obiektywie-Alicji-Zmyslowskiej.jpg");
         background-size: cover;
-        font-weight: bold;
+        font-weight: 700;
         text-align: center;
         color: $baseColor1;
         @include desktop{
@@ -19,6 +19,7 @@ body{
                     background: rgba(255,255,255, 0.25);
                 };
                 .title{
+                    font-weight: 700;
                     font-size: 1.25rem;
                     padding-left: 15px;
                     line-height: 40px;
@@ -43,6 +44,7 @@ body{
                         display: block;
                         height: 75px;
                         font-size: 2rem;
+                        font-weight: 700;
                         color: transparent;
                         animation-name: visible;
                         animation-duration: 2s;
@@ -77,6 +79,7 @@ body{
                     ul{
                         li{
                             font-size: 1rem;
+                            font-weight: 700;
                             text-decoration: none;
                             list-style: none;
                             line-height: 40px;

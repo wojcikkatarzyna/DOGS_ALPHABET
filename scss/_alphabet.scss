@@ -5,31 +5,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  @include desktop{
-      min-height: 750px;
-  }
+
     header{
         color: $baseColor1;
         background: rgba(255,255,255, 0.25);
         .title{
             border-top: 5px solid $baseColor1;
-            border-bottom: 5px solid $baseColor1;
             text-align: center;
             position: relative;
             height: 100px;
             @include tablet{
               height: 150px;
               border-top: 10px solid $baseColor1;
-              border-bottom: 10px solid $baseColor1;
             }
             @include desktop{
               height: 150px;
               border-top: 10px solid $baseColor1;
-              border-bottom: 10px solid $baseColor1;
             }
             h1{
                 font-size: 1.5rem;
-                font-weight: bold;
+                font-weight: 700;
                 text-decoration: underline;
                 padding: 15px;
                 @include tablet{
@@ -40,6 +35,7 @@
                 }
             }
             h2{
+                font-weight: 700;
                 font-size: 1rem;
                 @include tablet{
                   font-size: 2rem;
@@ -52,6 +48,13 @@
                 position: absolute;
                 top: 10px;
                 right: 20px;
+                font-size: 1.5rem;
+                @include tablet{
+                  font-size: 2rem;
+                }
+                @include desktop{
+                  font-size: 3rem;
+                }
             }
         }
     }
@@ -61,6 +64,9 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
+        @include desktop{
+            min-height: 750px;
+        }
         .box{
             width: 30vw;
             height: 30vw;
