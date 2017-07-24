@@ -6,11 +6,12 @@ $(document).ready(function(){
 
     // MOBILE MENU:
     const hamburger = $('.mobileMenu');
+    const nav = $('nav');
 
     hamburger.on('click', function(e){
       e.preventDefault();
-      $(this).next().toggleClass('showMenu');
-    })
+      nav.slideToggle();
+    });
 
     //SET BOX'S BACKGROUND IN ALPHABET SECTION:
     const boxes = $('#alphabet .box');
@@ -393,47 +394,47 @@ $(document).ready(function(){
 
               //SIZE OF ICONS:
 
-              var mobile = window.matchMedia('(max-width: 765px)');
-              mobile.addListener(function(m){
-
-                  if(m.matches && arrow.hasClass('fa-2x')){
-                      arrow.removeClass('fa-2x');
-                  } else if(m.matches && arrow.hasClass('fa-3x')){
-                      arrow.removeClass('fa-3x');
-                  }
-                  if(m.matches && hamburger.hasClass('fa-2x')){
-                      hamburger.removeClass('fa-2x');
-                  } else if(m.matches && hamburger.hasClass('fa-3x')){
-                      hamburger.removeClass('fa-2x');
-                  }
-              })
-
-              var mobile = window.matchMedia('(min-width: 765px) and (max-width:1024px)');
-              mobile.addListener(function(m){
-                console.log('matched');
-                  if(m.matches){
-                      arrow.addClass('fa-2x');
-                      hamburger.addClass('fa-2x');
-                  }
-                  if(m.matches && arrow.hasClass('fa-3x')){
-                      arrow.removeClass('fa-3x');
-                  }
-                  if(m.matches && hamburger.hasClass('fa-3x')){
-                      hamburger.removeClass('fa-3x');
-                  }
-              })
-
-              var mobile = window.matchMedia('(min-width: 1024px)');
-              mobile.addListener(function(m){
-                  if(m.matches){
-                      arrow.addClass('fa-3x');
-                  }
-                  if(m.matches && arrow.hasClass('fa-2x')){
-                      arrow.removeClass('fa-2x');
-                  }
-                  if(m.matches && hamburger.hasClass('fa-2x')){
-                      hamburger.removeClass('fa-2x');
-                  }
-              })
+              // var mobile = window.matchMedia('(max-width: 765px)');
+              // mobile.addListener(function(m){
+              //
+              //     if(m.matches && arrow.hasClass('fa-2x')){
+              //         arrow.removeClass('fa-2x');
+              //     } else if(m.matches && arrow.hasClass('fa-3x')){
+              //         arrow.removeClass('fa-3x');
+              //     }
+              //     if(m.matches && hamburger.hasClass('fa-2x')){
+              //         hamburger.removeClass('fa-2x');
+              //     } else if(m.matches && hamburger.hasClass('fa-3x')){
+              //         hamburger.removeClass('fa-2x');
+              //     }
+              // })
+              //
+              // var mobile = window.matchMedia('(min-width: 765px) and (max-width:1024px)');
+              // mobile.addListener(function(m){
+              //   console.log('matched');
+              //     if(m.matches){
+              //         arrow.addClass('fa-2x');
+              //         hamburger.addClass('fa-2x');
+              //     }
+              //     if(m.matches && arrow.hasClass('fa-3x')){
+              //         arrow.removeClass('fa-3x');
+              //     }
+              //     if(m.matches && hamburger.hasClass('fa-3x')){
+              //         hamburger.removeClass('fa-3x');
+              //     }
+              // })
+              //
+              // var mobile = window.matchMedia('(min-width: 1024px)');
+              // mobile.addListener(function(m){
+              //     if(m.matches){
+              //         arrow.addClass('fa-3x');
+              //     }
+              //     if(m.matches && arrow.hasClass('fa-2x')){
+              //         arrow.removeClass('fa-2x');
+              //     }
+              //     if(m.matches && hamburger.hasClass('fa-2x')){
+              //         hamburger.removeClass('fa-2x');
+              //     }
+              // })
 
 })

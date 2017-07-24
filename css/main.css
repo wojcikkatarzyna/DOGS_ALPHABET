@@ -247,104 +247,98 @@ input[type=button] {
 body {
   font-size: 20px; }
 
-header > div .name, header > div nav {
-  color: white;
-  background-color: #575657; }
-
-header > div {
-  border-bottom: 5px solid #1fabdb; }
-  @media (min-width: 765px) {
-    header > div {
-      border-bottom: 10px solid #1fabdb; } }
+header {
+  background-image: url("http://bi.gazeta.pl/im/56/33/10/z16987478Q,Psy-w-obiektywie-Alicji-Zmyslowskiej.jpg");
+  background-size: cover;
+  font-weight: bold;
+  text-align: center;
+  color: #0c1887; }
   @media (min-width: 1024px) {
-    header > div {
-      border-bottom: 10px solid #1fabdb; } }
-  @media (min-width: 1024px) {
-    header > div .name {
-      text-align: center;
-      min-height: 200px;
-      color: white;
-      background-color: #1fabdb; } }
-  header > div .name .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-left: 15px;
-    min-height: 75px;
-    line-height: 75px; }
+    header {
+      background-position: 0 -115px; } }
+  header > div:first-of-type .name {
+    min-height: 40px; }
     @media (min-width: 765px) {
-      header > div .name .title {
-        font-size: 2.5rem; } }
+      header > div:first-of-type .name {
+        min-height: 75px; } }
     @media (min-width: 1024px) {
-      header > div .name .title {
-        font-size: 5rem;
-        height: 125px;
-        line-height: 150px;
-        letter-spacing: 11px;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 2s steps(15, end); } }
-  header > div .name .description {
-    display: none; }
-    @media (min-width: 1024px) {
-      header > div .name .description {
-        display: block;
-        height: 75px;
-        font-size: 2rem;
-        color: transparent;
-        animation-name: visible;
-        animation-duration: 2s;
-        animation-delay: 3s;
-        animation-fill-mode: forwards; } }
-  header > div nav {
-    text-align: center;
-    text-align: right; }
-    header > div nav .mobileMenu {
-      min-height: 75px;
-      padding-right: 15px;
-      padding-top: 5px; }
-      @media (min-width: 1024px) {
-        header > div nav .mobileMenu {
-          display: none; } }
-    header > div nav a {
-      text-decoration: none;
-      color: white;
-      font-size: 0.75rem; }
+      header > div:first-of-type .name {
+        min-height: 200px; } }
+    header > div:first-of-type .name .title {
+      font-size: 1.25rem;
+      padding-left: 15px;
+      line-height: 40px; }
       @media (min-width: 765px) {
-        header > div nav a {
-          font-size: 1.5rem; } }
+        header > div:first-of-type .name .title {
+          font-size: 2.5rem;
+          line-height: 75px; } }
       @media (min-width: 1024px) {
-        header > div nav a {
-          font-size: 1.5rem; } }
-    header > div nav ul {
+        header > div:first-of-type .name .title {
+          font-size: 5rem;
+          height: 125px;
+          line-height: 150px;
+          letter-spacing: 11px;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: typing 2s steps(15, end); } }
+    header > div:first-of-type .name .description {
       display: none; }
       @media (min-width: 1024px) {
-        header > div nav ul {
-          display: flex;
-          justify-content: space-around; } }
-      header > div nav ul li {
-        list-style: none;
-        text-align: center;
-        line-height: 45px;
-        height: 45px; }
-        @media (min-width: 765px) {
-          header > div nav ul li {
-            line-height: 65px;
-            min-height: 65px; } }
-        @media (min-width: 1024px) {
-          header > div nav ul li {
-            width: 33.333%;
-            line-height: 65px;
-            min-height: 65px; }
-            header > div nav ul li:nth-of-type(2) {
-              border-left: 5px solid #aca6a6;
-              border-right: 5px solid #aca6a6; } }
-
-.showMenu {
-  display: block; }
-  .showMenu li {
-    border: transparent;
-    border-top: 5px solid #aca6a6; }
+        header > div:first-of-type .name .description {
+          display: block;
+          height: 75px;
+          font-size: 2rem;
+          color: transparent;
+          animation-name: visible;
+          animation-duration: 2s;
+          animation-delay: 3s;
+          animation-fill-mode: forwards; } }
+  header > div:first-of-type .mobileMenu {
+    display: flex;
+    justify-content: center; }
+    header > div:first-of-type .mobileMenu a {
+      font-size: 1rem;
+      line-height: 40px;
+      color: #0c1887; }
+      @media (min-width: 765px) {
+        header > div:first-of-type .mobileMenu a {
+          line-height: 75px;
+          font-size: 1.5rem; } }
+      @media (min-width: 1024px) {
+        header > div:first-of-type .mobileMenu a {
+          display: none; } }
+  header > div:nth-of-type(2) nav {
+    display: none; }
+    @media (min-width: 1024px) {
+      header > div:nth-of-type(2) nav {
+        display: block !important; } }
+    header > div:nth-of-type(2) nav ul li {
+      font-size: 1rem;
+      text-decoration: none;
+      list-style: none;
+      line-height: 40px;
+      height: 40px;
+      border: transparent;
+      border-top: 5px solid rgba(255, 255, 255, 0.25); }
+      header > div:nth-of-type(2) nav ul li a {
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.25);
+        color: #0c1887; }
+      @media (min-width: 765px) {
+        header > div:nth-of-type(2) nav ul li {
+          font-size: 1.5rem;
+          line-height: 65px;
+          min-height: 65px; } }
+      @media (min-width: 1024px) {
+        header > div:nth-of-type(2) nav ul li {
+          display: inline-block;
+          width: 33.333%;
+          line-height: 65px;
+          min-height: 65px; }
+          header > div:nth-of-type(2) nav ul li:nth-of-type(2) {
+            border-left: 5px solid rgba(255, 255, 255, 0.25);
+            border-right: 5px solid rgba(255, 255, 255, 0.25); } }
 
 #gallery > div {
   background: #e2e2e2;
@@ -367,7 +361,7 @@ header > div {
     #gallery > div .prev .arrowLeft, #gallery > div .prev .arrowRigth, #gallery > div .next .arrowLeft, #gallery > div .next .arrowRigth {
       width: 25px;
       height: 25px;
-      border: 5px solid #1fabdb;
+      border: 5px solid #0c1887;
       transform: rotate(45deg);
       line-height: 200px; }
       @media (min-width: 765px) {
@@ -420,7 +414,7 @@ header > div {
       #gallery > div .galleryContent div a {
         color: white;
         font-size: 0.75rem;
-        background: #1fabdb;
+        background: #0c1887;
         border-radius: 25px;
         width: 100px;
         height: 30px;
@@ -451,21 +445,21 @@ header > div {
     background: #575657;
     color: white; }
     #alphabet header .title {
-      border-top: 5px solid #1fabdb;
-      border-bottom: 5px solid #1fabdb;
+      border-top: 5px solid #0c1887;
+      border-bottom: 5px solid #0c1887;
       text-align: center;
       position: relative;
       height: 100px; }
       @media (min-width: 765px) {
         #alphabet header .title {
           height: 150px;
-          border-top: 10px solid #1fabdb;
-          border-bottom: 10px solid #1fabdb; } }
+          border-top: 10px solid #0c1887;
+          border-bottom: 10px solid #0c1887; } }
       @media (min-width: 1024px) {
         #alphabet header .title {
           height: 150px;
-          border-top: 10px solid #1fabdb;
-          border-bottom: 10px solid #1fabdb; } }
+          border-top: 10px solid #0c1887;
+          border-bottom: 10px solid #0c1887; } }
       #alphabet header .title h1 {
         font-size: 1.5rem;
         font-weight: bold;
@@ -506,7 +500,7 @@ header > div {
       position: relative;
       margin: 25px 0;
       border-radius: 25%;
-      border: 5px solid #1fabdb; }
+      border: 5px solid #0c1887; }
       @media (min-width: 765px) {
         #alphabet .breeds .box {
           width: 18vw;
@@ -530,7 +524,7 @@ header > div {
         z-index: 30;
         background-color: rgba(255, 255, 255, 0.7);
         font-size: 25vw;
-        color: #1fabdb;
+        color: #0c1887;
         text-align: center;
         line-height: 100%;
         border-radius: 25%; }
@@ -545,7 +539,7 @@ header > div {
   display: none; }
 
 .racesBox {
-  border: 5px solid #1fabdb;
+  border: 5px solid #0c1887;
   background: white;
   position: relative; }
   .racesBox button {
@@ -589,7 +583,7 @@ header > div {
     .racesBox .racesInfo h3 {
       font-size: 1.25rem;
       text-decoration: underline;
-      color: #1fabdb;
+      color: #0c1887;
       font-weight: bold; }
       @media (min-width: 765px) {
         .racesBox .racesInfo h3 {
@@ -680,27 +674,27 @@ header > div {
   from {
     color: transparent; }
   to {
-    color: white; } }
+    color: #0c1887; } }
 
 #matchBreed header {
   background: #575657;
   color: white; }
   #matchBreed header .title {
-    border-top: 5px solid #1fabdb;
-    border-bottom: 5px solid #1fabdb;
+    border-top: 5px solid #0c1887;
+    border-bottom: 5px solid #0c1887;
     text-align: center;
     position: relative;
     height: 100px; }
     @media (min-width: 765px) {
       #matchBreed header .title {
         height: 150px;
-        border-top: 10px solid #1fabdb;
-        border-bottom: 10px solid #1fabdb; } }
+        border-top: 10px solid #0c1887;
+        border-bottom: 10px solid #0c1887; } }
     @media (min-width: 1024px) {
       #matchBreed header .title {
         height: 150px;
-        border-top: 10px solid #1fabdb;
-        border-bottom: 10px solid #1fabdb; } }
+        border-top: 10px solid #0c1887;
+        border-bottom: 10px solid #0c1887; } }
     #matchBreed header .title h1 {
       font-size: 1.5rem;
       font-weight: bold;
@@ -734,9 +728,9 @@ header > div {
   background: -o-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%);
   background: -ms-linear-gradient(top, #e2e2e2 0%, #575657 0%, #dbdbdb 95%, #fefefe 100%); }
   #matchDog .quiz hr {
-    border-top: 5px double #1fabdb; }
+    border-top: 5px double #0c1887; }
   #matchDog .quiz h3 {
-    color: #1fabdb;
+    color: #0c1887;
     font-weight: bold;
     font-size: 1rem; }
     @media (min-width: 765px) {
@@ -749,7 +743,7 @@ header > div {
     #matchDog .quiz form input[type='radio'] {
       transform: scale(1.5); } }
   #matchDog .quiz form input[type=submit] {
-    background-color: #1fabdb;
+    background-color: #0c1887;
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -812,7 +806,7 @@ header > div {
       #findDog svg {
         height: 100%; } }
   #findDog select {
-    border: 3px solid #1fabdb;
+    border: 3px solid #0c1887;
     font-size: 1rem;
     width: 100%;
     margin-bottom: 25px; }
@@ -840,7 +834,7 @@ header > div {
     #findDog div.shelterList ul li h3 {
       font-size: 1rem;
       font-weight: bold;
-      color: #1fabdb; }
+      color: #0c1887; }
       @media (min-width: 765px) {
         #findDog div.shelterList ul li h3 {
           font-size: 1.5rem; } }
@@ -864,13 +858,13 @@ header > div {
 footer {
   background: #575657;
   color: white;
-  border-top: 5px solid #1fabdb; }
+  border-top: 5px solid #0c1887; }
   @media (min-width: 765px) {
     footer {
-      border-top: 10px solid #1fabdb; } }
+      border-top: 10px solid #0c1887; } }
   @media (min-width: 1024px) {
     footer {
-      border-top: 10px solid #1fabdb; } }
+      border-top: 10px solid #0c1887; } }
   footer div {
     display: flex;
     justify-content: space-between;

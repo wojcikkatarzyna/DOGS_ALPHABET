@@ -1,32 +1,29 @@
-%head{
-  color: white;
-  background-color: $baseColor3;
-}
+
 header{
-    >div{
-        border-bottom: 5px solid $baseColor1;
-        @include tablet{
-        border-bottom: 10px solid $baseColor1;
-        }
-        @include desktop{
-        border-bottom: 10px solid $baseColor1;
-        }
+    background-image: url("http://bi.gazeta.pl/im/56/33/10/z16987478Q,Psy-w-obiektywie-Alicji-Zmyslowskiej.jpg");
+    background-size: cover;
+    font-weight: bold;
+    text-align: center;
+    color: $baseColor1;
+    @include desktop{
+        background-position: 0 -115px;
+    }
+    >div:first-of-type{
         .name{
-            @extend %head;
+            min-height: 40px;
+            @include tablet{
+                min-height: 75px;
+            }
             @include desktop{
-              text-align: center;
-              min-height: 200px;
-              color: white;
-              background-color: $baseColor1;
+                min-height: 200px;
             };
             .title{
                 font-size: 1.25rem;
-                font-weight: bold;
                 padding-left: 15px;
-                min-height: 75px;
-                line-height: 75px;
+                line-height: 40px;
                 @include tablet{
                 font-size: 2.5rem;
+                line-height: 75px;
                 }
                 @include desktop{
                   font-size: 5rem;
@@ -52,65 +49,61 @@ header{
                   animation-fill-mode: forwards;
                 }
             }
-        }
-        nav{
-          text-align: center;
-          text-align: right;
-          @extend %head;
+          }
           .mobileMenu{
-            min-height: 75px;
-            padding-right: 15px;
-            padding-top: 5px;
-            @include desktop{
-              display: none;
-            };
-          }
-          a{
-            text-decoration: none;
-            color: white;
-            font-size: 0.75rem;
-            @include tablet{
-              font-size: 1.5rem;
-            };
-            @include desktop{
-              font-size: 1.5rem;
-            };
-          }
-          ul{
-            display: none;
-            @include desktop{
-              display: flex;
-              justify-content: space-around;
-            }
-            li{
-              list-style: none;
-              text-align: center;
-              line-height: 45px;
-              height: 45px;
-
+            display: flex;
+            justify-content: center;
+            a{
+              font-size: 1rem;
+              line-height: 40px;
+              color: $baseColor1;
               @include tablet{
-                line-height: 65px;
-                min-height: 65px;
-              }
+                line-height: 75px;
+                font-size: 1.5rem;
+              };
               @include desktop{
-                width: 33.333%;
-                line-height: 65px;
-                min-height: 65px;
-                &:nth-of-type(2){
-                  border-left: 5px solid rgb(172, 166, 166);
-                  border-right: 5px solid rgb(172, 166, 166);
-                }
+                display: none;
               };
             }
           }
         }
-    }
+        >div:nth-of-type(2){
+            nav{
+              display: none;
+              @include desktop{
+                  display: block !important;
+              };
+              ul{
+                li{
+                  font-size: 1rem;
+                  text-decoration: none;
+                  list-style: none;
+                  line-height: 40px;
+                  height: 40px;
+                  border: transparent;
+                  border-top: 5px solid rgba(255,255,255, 0.25);
+                  a{
+                      text-decoration: none;
+                      background: rgba(255,255,255, 0.25);
+                      color: $baseColor1;
+                  }
+                  @include tablet{
+                    font-size: 1.5rem;
+                    line-height: 65px;
+                    min-height: 65px;
+                  }
+                  @include desktop{
+                    display: inline-block;
+                    width: 33.333%;
+                    line-height: 65px;
+                    min-height: 65px;
+                    &:nth-of-type(2){
+                      border-left: 5px solid rgba(255,255,255, 0.25);
+                      border-right: 5px solid rgba(255,255,255, 0.25);
+                    }
+                  };
+                }
+              }
+            }
+        }
   }
-
-.showMenu{
-  display: block;
-  li{
-    border: transparent;
-    border-top: 5px solid rgb(172, 166, 166);
-  }
-}
